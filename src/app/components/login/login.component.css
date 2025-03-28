@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    height: 700px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Esto añade centrado horizontal adicional */
+
+}
+
+/* Sección de la imagen */
+.left {
+    width: 50%;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Sección del formulario */
+.right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0073e6;
+    margin-bottom: 20px;
+}
+
+/* Botones */
+.btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.google {
+    background: white;
+    border: 1px solid #ccc;
+}
+
+.google:hover {
+    background: #f1f1f1;
+}
+
+.apple {
+    background: black;
+    color: white;
+}
+
+.apple:hover {
+    background: #333;
+}
+
+.separator {
+    font-size: 14px;
+    color: #777;
+    margin: 15px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Campos de entrada */
+form {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.login-btn {
+    background: #0073e6;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.login-btn:hover {
+    background: #005bb5;
+}
+
+.registro-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.registro-link .link-registro {
+    color: #0073e6;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.registro-link .link-registro:hover {
+    color: #005bbf;
+    text-decoration: underline;
+}

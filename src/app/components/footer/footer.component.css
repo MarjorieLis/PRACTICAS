@@ -1,0 +1,91 @@
+.footer {
+    background-color: #111;
+    color: white;
+    padding: 20px 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    color: white;
+}
+
+.redes-sociales .social-icons {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.redes-sociales .social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.register-btn {
+    background-color: #0066ff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.register-btn:hover {
+    background-color: #004bcc;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.language-btn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.language-btn:hover {
+    background-color: white;
+    color: black;
+}

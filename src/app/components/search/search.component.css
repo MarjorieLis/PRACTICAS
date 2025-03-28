@@ -1,0 +1,94 @@
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Ajusta el ancho para centrar mejor */
+    margin: 40px auto; /* Separa del carrusel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px; /* Evita que se haga muy grande */
+    background: white;
+    padding: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Agrega un pequeño sombreado */
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: none;
+    font-size: 16px;
+    outline: none; /* Evita borde al hacer clic */
+}
+
+.search-icons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.search-icons button {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.search-button {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.search-button:hover {
+    background-color: #1558c2;
+}
+
+/* Estilo mejorado del menú desplegable */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 15px;
+    z-index: 1000;
+}
+
+.resource-grid {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.resource-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.2s;
+}
+
+.resource-item:hover {
+    transform: scale(1.05);
+}

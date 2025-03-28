@@ -1,0 +1,33 @@
+<div class="search-container">
+  <div class="search-input-container">
+    <input
+      type="text"
+      placeholder="Buscar en todos los recursos"
+      (focus)="toggleDropdown()"
+      class="search-input"
+    />
+    <div class="search-icons">
+      <button class="translate-icon">🌐</button>
+      <button class="settings-icon">⚙️</button>
+    </div>
+    <button class="search-button">Buscar</button>
+  </div>
+
+  @if (isDropdownVisible) {
+    <div class="dropdown-menu" (blur)="closeDropdown()">
+      <div class="dropdown-section">
+        <h3>Comenzar a crear</h3>
+        <p>Create content based on your search</p>
+
+        <div class="resource-grid">
+          @for (option of searchOptions; track option) {
+            <div class="resource-item">
+              <div class="resource-icon">{{ option.icon }}</div>
+              <span>{{ option.title }}</span>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  }
+</div>
