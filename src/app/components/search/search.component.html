@@ -1,6 +1,7 @@
 <div class="search-container">
   <div class="search-input-container">
     <input
+      #searchInput
       type="text"
       placeholder="Buscar en todos los recursos"
       (focus)="toggleDropdown()"
@@ -13,21 +14,18 @@
     <button class="search-button">Buscar</button>
   </div>
 
-  @if (isDropdownVisible) {
-    <div class="dropdown-menu" (blur)="closeDropdown()">
-      <div class="dropdown-section">
-        <h3>Comenzar a crear</h3>
-        <p>Create content based on your search</p>
+  <!-- Dropdown de resultados de búsqueda -->
+  <div *ngIf="isDropdownVisible" class="dropdown-menu" #dropdownMenu>
+    <div class="dropdown-section">
+      <h3>Comenzar a crear</h3>
+      <p>Crear contenido basado en tu búsqueda</p>
 
-        <div class="resource-grid">
-          @for (option of searchOptions; track option) {
-            <div class="resource-item">
-              <div class="resource-icon">{{ option.icon }}</div>
-              <span>{{ option.title }}</span>
-            </div>
-          }
+      <div class="resource-grid">
+        <div class="resource-item" *ngFor="let option of searchOptions">
+          <div class="resource-icon">{{ option.icon }}</div>
+          <span>{{ option.title }}</span>
         </div>
       </div>
     </div>
-  }
+  </div>
 </div>
