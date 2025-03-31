@@ -10,7 +10,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { Gallery1Component } from './components/gallery1/gallery1.component';  
 import { CarouselGalleryComponent } from './components/carousel-gallery/carousel-gallery.component';   
 
-//import { MediaLibraryComponent } from './components/media-library/media-library.component';
+import { ResourceCategoriesComponent } from './components/resource-categories/resource-categories.component';  // Asegúrate de importar el componente
 import { SearchComponent } from './components/search/search.component';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './components/login/login.component';
@@ -27,10 +27,10 @@ import { routes } from './app.routes';  // Importa las rutas
         GalleryComponent,
         Gallery1Component,
         CarouselGalleryComponent,
-        //MediaLibraryComponent,
-        SearchComponent,
+        ResourceCategoriesComponent,
         LoginComponent,
-        RegistroComponent
+        RegistroComponent,
+        SearchComponent
     ],
     imports: [
         BrowserModule,

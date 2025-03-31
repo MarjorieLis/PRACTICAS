@@ -5,7 +5,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { Gallery1Component } from './components/gallery1/gallery1.component';
 import { CarouselGalleryComponent } from './components/carousel-gallery/carousel-gallery.component';
-//import { MediaLibraryComponent } from './components/media-library/media-library.component';
+import { ResourceCategoriesComponent } from './components/resource-categories/resource-categories.component';  // Asegúrate de importar el componente
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { filter } from 'rxjs/operators';
@@ -25,9 +25,8 @@ import { SearchComponent } from './components/search/search.component';
     GalleryComponent,
     Gallery1Component,
     CarouselGalleryComponent,
+    ResourceCategoriesComponent,
     SearchComponent
-    //MediaLibraryComponent,
-    
   ]
 })
 export class AppComponent {

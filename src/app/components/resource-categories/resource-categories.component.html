@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Millones de archivos listos para usar</h2>
+  <div class="categories">
+    <div *ngFor="let category of categories" class="category">
+      <img [src]="category.icon" [alt]="category.name">
+      <span>{{ category.name }}</span>
+    </div>
+  </div>
+
+  <h3>Millones de equipos confían en nosotros</h3>
+  <div class="companies">
+    <div *ngFor="let company of companies" class="company-logo">
+      <img [src]="company.logoUrl" [alt]="company.altText">
+      <span>{{ company.name }}</span>
+    </div>
+  </div>
+</div>
