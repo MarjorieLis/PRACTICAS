@@ -1,10 +1,13 @@
 <div class="container">
   <h2>Millones de archivos listos para usar</h2>
   <div class="categories">
-    <div *ngFor="let category of categories" class="category">
-      <img [src]="category.icon" [alt]="category.name">
-      <span>{{ category.name }}</span>
+    <div *ngFor="let category of categories" (click)="navigateToCategory(category)">
+      <div class="category-item">
+        <img [src]="category.icon" [alt]="category.name" />
+        <h3>{{ category.name }}</h3>
+      </div>
     </div>
+    
   </div>
 
   <h3>Millones de equipos confían en nosotros</h3>

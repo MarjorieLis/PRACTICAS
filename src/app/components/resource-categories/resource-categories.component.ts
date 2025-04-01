@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router'; // Importar Router
 
 interface ResourceCategory {
   icon: string;
@@ -39,12 +40,14 @@ export class ResourceCategoriesComponent implements OnInit {
     { name: 'Snowflake', logoUrl: 'assets/logos/snowflake.png', altText: 'Snowflake logo' }
   ];
 
-  constructor() { }
+  constructor(private router: Router) { } // Inyectar Router
 
   ngOnInit(): void {}
 
+  // Método modificado para navegar a la ruta correspondiente
   navigateToCategory(category: ResourceCategory): void {
     console.log(`Navegando a ${category.name}`);
-    // Implementar navegación real con Router cuando sea necesario
+    // Navegar a la ruta usando Router
+    this.router.navigate([category.route]);
   }
 }

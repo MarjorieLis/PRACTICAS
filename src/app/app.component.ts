@@ -33,17 +33,16 @@ import { SearchComponent } from './components/search/search.component';
   ]
 })
 export class AppComponent {
-  title = 'pagina';
-  isLoginPage = false;
+  constructor(private router: Router) {}
 
-  constructor(private router: Router) {
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd)
-    ).subscribe((event: any) => {
-      this.isLoginPage = event.url === '/login';
-    });
+  // Verifica si estamos en la página de login o registro
+  isAuthPage(): boolean {
+    const currentUrl = this.router.url;
+    return currentUrl === '/login' || currentUrl === '/registro';
   }
+
+  // Verifica si estamos en la página de inicio
   isHomePage(): boolean {
     return this.router.url === '/';
-    }
+  }
 }

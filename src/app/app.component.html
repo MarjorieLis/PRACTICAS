@@ -1,13 +1,18 @@
-<ng-container *ngIf="isHomePage()">
+<!-- Mostrar el header y footer solo si no estamos en la página de login o registro -->
+<ng-container *ngIf="!isAuthPage()">
   <app-header></app-header>
   <main>
-    
+    <!-- Aquí van las secciones de tu página -->
     <app-search></app-search> 
     <app-carousel-gallery></app-carousel-gallery>
-    <app-resource-categories></app-resource-categories>    <app-gallery1></app-gallery1>
+    <app-resource-categories></app-resource-categories>
+    <app-gallery1></app-gallery1>
     <app-gallery></app-gallery>
   </main>
   <app-footer></app-footer>
 </ng-container>
 
-<router-outlet></router-outlet>
+<!-- Para la página de login y registro no mostramos el header y footer -->
+<ng-container *ngIf="isAuthPage()">
+  <router-outlet></router-outlet>
+</ng-container>

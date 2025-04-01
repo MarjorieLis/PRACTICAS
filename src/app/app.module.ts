@@ -17,7 +17,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RouterModule } from '@angular/router'; // Asegurar que RouterModule está importado
 import { RegistroComponent } from './components/registro/registro.component';
 import { routes } from './app.routes';  // Importa las rutas
-import { NavbarComponent } from './components/navbar/navbar.component';
+//import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
@@ -32,7 +32,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
         LoginComponent,
         RegistroComponent,
         SearchComponent,
-        NavbarComponent
+        //NavbarComponent
         
     ],
     imports: [
