@@ -11,25 +11,25 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100vw;
     background-color: #f5f5f5;
+    overflow: hidden;
 }
 
 /* Contenedor principal */
 .container {
     display: flex;
-    width: 80%;
-    max-width: 1000px;
-    height: 700px;
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100vw;
+    height: 100vh;
 }
 
 /* Sección izquierda (imagen) */
 .left {
     width: 50%;
-    background-color: #ddd;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .left img {
@@ -41,27 +41,36 @@ body {
 /* Sección derecha (formulario) */
 .right {
     width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    width: 90%;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 40px;
-    text-align: center;
 }
 
 /* Logo */
 .logo {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
     color: #0073e6;
     margin-bottom: 20px;
 }
 
-/* Botones de registro rápido */
+/* Botones de registro */
 .btn {
     width: 100%;
-    max-width: 300px;
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
     border: none;
     border-radius: 5px;
@@ -79,78 +88,28 @@ body {
     margin-right: 10px;
 }
 
-/* Colores de los botones */
-.google {
-    background: white;
-    border: 1px solid #ccc;
-}
-
-.google:hover {
-    background: #f1f1f1;
-}
-
-.apple {
-    background: black;
-    color: white;
-}
-
-.apple:hover {
-    background: #333;
-}
-
-.email {
-    background: white;
-    border: 1px solid #ccc;
-}
-
-.email:hover {
-    background: #f1f1f1;
-}
-
-/* Línea separadora */
-.separator {
-    font-size: 14px;
-    color: #777;
-    margin: 15px 0;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
 /* Formulario manual */
 form {
     width: 100%;
-    max-width: 300px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 form input {
     width: 100%;
-    padding: 10px;
-    margin: 8px 0;
+    padding: 12px;
+    margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
-/* Checkbox */
-.checkbox-container {
-    display: flex;
-    align-items: center;
-    margin: 15px 0;
-    font-size: 14px;
-    color: #666;
-}
-
-.checkbox-container input {
-    margin-right: 10px;
-}
-
-/* Botón de registro manual */
+/* Botón de registro */
 .register-btn {
     background: #0073e6;
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     padding: 12px;
     margin-top: 10px;
@@ -158,6 +117,7 @@ form input {
     border: none;
     border-radius: 5px;
     transition: background 0.3s;
+    width: 100%;
 }
 
 .register-btn:hover {
@@ -166,8 +126,10 @@ form input {
 
 /* Términos y política */
 .terms {
-    font-size: 12px;
-    color: #aaa;
+    font-size: 14px;
+    color: #777;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .terms a {
@@ -182,38 +144,19 @@ form input {
 /* Link de inicio de sesión */
 .login-link {
     margin-top: 15px;
-    font-size: 14px;
+    font-size: 16px;
+    text-align: center;
 }
 
 .login-link a {
     color: #0073e6;
     text-decoration: none;
     font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .login-link a:hover {
     text-decoration: underline;
-}
-
-.registro-link .link-registro {
-    color: #0073e6;
-    text-decoration: none;
-    font-weight: bold;
-    cursor: pointer; /* Añade esta línea */
-}
-
-.registro-link .link-registro:hover {
-    text-decoration: underline;
-}
-.login-link a {
-    color: #0073e6;
-    text-decoration: none;
-    font-weight: bold;
-    cursor: pointer; /* Añade la manita */
-    transition: color 0.3s ease; /* Efecto de transición suave */
-}
-
-.login-link a:hover {
-    text-decoration: underline;
-    color: #005bbf; /* Un tono ligeramente más oscuro al pasar el mouse */
+    color: #005bbf;
 }

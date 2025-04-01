@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <!-- Sección de la imagen -->
-        <div class="left">
-            <img src="assets/images/background.jpg" alt="Imagen de fondo">
-        </div>
+<div class="container">
+    <!-- Sección de la imagen -->
+    <div class="left">
+        <img src="assets/images/background.jpg" alt="Imagen de fondo">
+    </div>
 
-        <!-- Sección del formulario -->
-        <div class="right">
+    <!-- Sección del formulario -->
+    <div class="right">
+        <div class="form-container">
             <h1 class="logo">FREEPIK</h1>
             <h2>Crea una cuenta</h2>
 
@@ -30,13 +22,8 @@
                 <input type="email" placeholder="Correo electrónico" required>
                 <input type="password" placeholder="Contraseña" required>
                 <input type="password" placeholder="Confirmar contraseña" required>
-<!--
-                <div class="checkbox-container">
-                    <input type="checkbox" id="notifications">
-                    <label for="notifications">No quiero recibir notificaciones con promociones de Freepik por email.</label>
-                </div> -->
 
-                <button type="submit" class="btn register-btn">Registrarse</button>
+                <button type="submit" class="register-btn">Registrarse</button>
             </form>
 
             <p class="terms">Al registrarte estás aceptando nuestros 
@@ -44,8 +31,6 @@
                 <a href="#">Política de Privacidad</a>.
             </p>
 
-            <p class="login-link">¿Ya tienes una cuenta? <a (click)="navegarAInicioSesion()">Inicia sesión</a></p>
-        </div>
+        <p class="login-link">¿Ya tienes una cuenta? <a (click)="navegarAInicioSesion()">Inicia sesión</a></p>
     </div>
-</body>
-</html>
+</div>

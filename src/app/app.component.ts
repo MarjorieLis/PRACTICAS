@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { filter } from 'rxjs/operators';
 import { SearchComponent } from './components/search/search.component';
+//import { NavbarComponent } from './components/navbar/navbar.component';
+
 
 @Component({
   selector: 'app-root',
@@ -26,7 +28,8 @@ import { SearchComponent } from './components/search/search.component';
     Gallery1Component,
     CarouselGalleryComponent,
     ResourceCategoriesComponent,
-    SearchComponent
+    SearchComponent,
+    //NavbarComponent
   ]
 })
 export class AppComponent {
