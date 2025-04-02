@@ -1,9 +1,35 @@
+/* Estilos para el texto principal */
+.hero-text {
+    text-align: center;
+    margin-top: 40px; /* Espacio encima del bloque de texto */
+    padding: 20px;
+    /* Eliminamos fondo y sombra para no tener cuadro */
+    background-color: transparent; /* Fondo transparente */
+    border-radius: 0; /* Sin bordes redondeados */
+    box-shadow: none; /* Sin sombra */
+}
+
+/* Título del texto principal */
+.hero-text h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Descripción debajo del título */
+.hero-text p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Estilos para la barra de búsqueda */
 .search-container {
     position: relative;
     width: 100%;
     max-width: 800px; /* Ajusta el ancho para centrar mejor */
-    margin: 40px auto; /* Separa del carrusel */
+    margin: 40px auto; /* Separa del bloque de texto */
     display: flex;
+    flex-direction: column; /* Cambiado a columna para que el texto esté encima */
     justify-content: center;
     align-items: center;
 }
@@ -52,6 +78,7 @@
     border-radius: 5px;
     font-weight: bold;
     transition: background 0.3s;
+    margin-top: 10px; /* Espacio entre el input y el botón */
 }
 
 .search-button:hover {
