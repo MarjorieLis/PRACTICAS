@@ -1,22 +1,41 @@
-<!-- Primer header -->
-<app-header></app-header>
-
-<main>
-  <h1>Página de Vectores</h1>
-  <p>Aquí va el contenido de la página de vectores...</p>
-</main>
-
-<!-- Primer footer -->
-<app-footer></app-footer>
-
-<!-- Segundo header -->
-<app-header></app-header>
-
-<!-- Sección extra de contenido (si es necesario) -->
-<section>
-  <h2>Sección adicional</h2>
-  <p>Otra parte del contenido de la página de vectores.</p>
-</section>
-
-<!-- Segundo footer -->
-<app-footer></app-footer>
+<div class="gallery-container">
+    <div class="gallery-header">
+      <h1 class="main-title">Imágenes vectoriales para todo tipo de proyectos</h1>
+      <p class="subtitle">Explora categorías de imágenes seleccionadas y dales a tus diseños el toque final perfecto</p>
+    </div>
+  
+    <div class="categories-grid">
+      <!-- Primera fila -->
+      <div class="row first-row">
+        @for (category of categories.slice(0, 3); track category.id) {
+          <div class="category-card wide" (click)="onCategoryClick(category)">
+            <div class="card-content" [style.background-image]="'url(' + category.imageUrl + ')'">
+              <div class="category-title">{{ category.title }}</div>
+            </div>
+          </div>
+        }
+      </div>
+  
+      <!-- Segunda fila -->
+      <div class="row second-row">
+        @for (category of categories.slice(3, 6); track category.id) {
+          <div class="category-card medium" (click)="onCategoryClick(category)">
+            <div class="card-content" [style.background-image]="'url(' + category.imageUrl + ')'">
+              <div class="category-title">{{ category.title }}</div>
+            </div>
+          </div>
+        }
+      </div>
+  
+      <!-- Tercera fila -->
+      <div class="row third-row">
+        @for (category of categories.slice(6, 9); track category.id) {
+          <div class="category-card medium" (click)="onCategoryClick(category)">
+            <div class="card-content" [style.background-image]="'url(' + category.imageUrl + ')'">
+              <div class="category-title">{{ category.title }}</div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>

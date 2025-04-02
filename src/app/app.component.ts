@@ -39,6 +39,10 @@ export class AppComponent {
     });
   }
 
+  isHomePage(): boolean {
+    return this.currentUrl === '/' || this.currentUrl === '/home';
+  }
+  
   isAuthPage(): boolean {
     return this.currentUrl === '/login' || this.currentUrl === '/registro';
   }
