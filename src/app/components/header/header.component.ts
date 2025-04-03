@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterLink, Router } from '@angular/router';
 
 @Component({
@@ -12,6 +12,10 @@ import { RouterLink, Router } from '@angular/router';
   //]
 })
 export class HeaderComponent {
+
+  @Input() bannerTitle: string = 'Título predeterminado';
+  @Input() bannerDescription: string = 'Descripción predeterminada';
+  @Input() bannerImage: string = '/assets/images/default-banner.jpg';
   constructor(private router: Router) {}
 
   navigateToLogin() {

@@ -4,12 +4,13 @@ import { LoginComponent } from './components/login/login.component';
 import { MediaLibraryComponent } from './components/media-library/media-library.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { VectoresComponent } from './components/vectores/vectores.component';
-
+import { FotosComponent } from './components/fotos/fotos.component';
 
 export const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'registro', component: RegistroComponent },
     { path: 'vectores', component: VectoresComponent },
+    { path: 'fotos', component: FotosComponent },
 
     { path: '', component: MediaLibraryComponent },
     { path: '**', redirectTo: '' }

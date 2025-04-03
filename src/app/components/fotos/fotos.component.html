@@ -1,1 +1,43 @@
-<p>fotos works!</p>
+<app-search-banner></app-search-banner>
+
+<!-- Aquí puedes agregar el resto del contenido de la página de fotos -->
+<div class="photo-gallery">
+  <!-- Contenedor de imágenes -->
+</div>
+
+<!-- Encabezado principal -->
+<div class="container">
+  <h1 class="main-title">Fotos perfectas para cada ocasión</h1>
+  <p class="subtitle">Navega por las distintas categorías para encontrar las imágenes que mejor expresen tus ideas y conecten con tu audiencia</p>
+
+  <!-- Grid de categorías principales -->
+  <div class="categories-grid">
+    <div *ngFor="let category of categories" class="category-card" (click)="onCategoryClick(category)">
+      <div class="card-image">
+        <img [src]="category.imageUrl" [alt]="category.title">
+      </div>
+      <div class="card-title">{{ category.title }}</div>
+    </div>
+  </div>
+
+  <!-- Sección de coherencia visual -->
+  <div class="coherence-section">
+    <h2 class="section-title">Mantén la coherencia en tus diseños</h2>
+    <p class="section-subtitle">Elige las fotos de la misma serie para seguir la misma narrativa visual en todo tu proceso creativo</p>
+    
+    <!-- Series de fotos -->
+    <div class="series-container">
+      <div *ngFor="let series of photoSeries" class="photo-series" (click)="onSeriesClick(series)">
+        <div class="main-photo">
+          <img [src]="series.mainPhoto" [alt]="series.title">
+          <div class="badge">{{ series.count }} imágenes</div>
+        </div>
+        <div class="thumbnails">
+          <div *ngFor="let thumbnail of series.thumbnails" class="thumbnail">
+            <img [src]="thumbnail" alt="Miniatura">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
