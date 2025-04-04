@@ -1,0 +1,92 @@
+.banner {
+    background-image: url('/assets/images/video-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+    padding: 50px 20px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.search-box input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+}
+
+.search-btn {
+    background: #2563eb;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.popular-searches {
+    margin-top: 15px;
+}
+
+.popular-searches button {
+    margin: 5px;
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.generate-videos {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.generate-btn {
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.videos-container {
+    text-align: center;
+    margin: 40px 20px;
+}
+
+.videos-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.video-card {
+    position: relative;
+    width: 250px;
+}
+
+.video-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.duration {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: black;
+    color: white;
+    padding: 3px 5px;
+    border-radius: 5px;
+    font-size: 12px;
+}

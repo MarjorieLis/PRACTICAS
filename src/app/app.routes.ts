@@ -5,12 +5,19 @@ import { MediaLibraryComponent } from './components/media-library/media-library.
 import { RegistroComponent } from './components/registro/registro.component';
 import { VectoresComponent } from './components/vectores/vectores.component';
 import { FotosComponent } from './components/fotos/fotos.component';
+import { IconosComponent } from './components/iconos/iconos.component';
+import { VideosComponent } from './components/videos/videos.component';
+import { PlantillasComponent } from './components/plantillas/plantillas.component';
+
 
 export const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'registro', component: RegistroComponent },
     { path: 'vectores', component: VectoresComponent },
     { path: 'fotos', component: FotosComponent },
+    { path: 'iconos', component: IconosComponent }, 
+    { path: 'videos', component: VideosComponent },
+    { path: 'plantillas', component: PlantillasComponent },
 
     { path: '', component: MediaLibraryComponent },
     { path: '**', redirectTo: '' }

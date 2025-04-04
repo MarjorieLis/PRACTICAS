@@ -1,0 +1,70 @@
+.iconos-banner {
+    background: #1e1e50;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.search-box input {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-btn {
+    background: #2563eb;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.popular-searches {
+    margin-top: 15px;
+}
+
+.popular-searches button {
+    margin: 5px;
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.iconos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    background: #e0e8ff;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.card span {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    background: #2563eb;
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+}
