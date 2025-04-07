@@ -1,35 +1,33 @@
-/* Reset de márgenes y estilos base */
+/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html,
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    background-color: #f5f5f5;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
-/* Contenedor principal */
 .container {
     display: flex;
-    width: 100vw;
     height: 100vh;
+    width: 100vw;
+    /* Asegura que ocupe todo el ancho de la ventana */
+    max-height: 100vh;
 }
 
-/* Sección izquierda (imagen) */
+/* Sección de la imagen */
 .left {
-    width: 50%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex: 1;
+    /* Cambiado de width fijo a flex para mejor distribución */
+    overflow: hidden;
 }
 
 .left img {
@@ -38,102 +36,225 @@ body {
     object-fit: cover;
 }
 
-/* Sección derecha (formulario) */
+/* Sección del formulario */
 .right {
-    width: 50%;
-    height: 100vh;
+    flex: 1;
+    /* Cambiado de width fijo a flex para mejor distribución */
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 20px;
+    background-color: white;
+    overflow-y: auto;
 }
 
-/* Contenedor del formulario */
 .form-container {
     width: 90%;
-    max-width: 400px;
+    /* Aumentado para ocupar más espacio */
+    max-width: 500px;
+    /* Aumentado para formularios más grandes */
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    max-height: 100vh;
 }
 
-/* Logo */
+
 .logo {
+    color: #0084ff;
     font-size: 28px;
     font-weight: bold;
-    color: #0073e6;
-    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 5px;
 }
 
-/* Botones de registro */
-.btn {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
+.title {
+    font-size: 22px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Botón de Google */
+.btn.google {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    color: #333;
+    font-size: 14px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background-color 0.3s;
 }
 
-.btn img {
-    width: 20px;
-    height: 20px;
+.btn.google:hover {
+    background-color: #f5f5f5;
+}
+
+.btn.google img {
+    width: 18px;
     margin-right: 10px;
 }
 
-/* Formulario manual */
-form {
-    width: 100%;
+/* Separador */
+.separator {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    text-align: center;
+    margin: 15px 0;
+    color: #777;
+    font-size: 13px;
 }
 
-form input {
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+.separator span {
+    padding: 0 15px;
+}
+
+/* Estilos del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.input-group {
+    position: relative;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
     width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #0084ff;
+    outline: none;
+}
+
+/* Estilo para el checkbox personalizado */
+.checkbox-container {
+    margin: 5px 0;
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 26px;
+    cursor: pointer;
+    font-size: 13px;
+    user-select: none;
+}
+
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.custom-checkbox:hover input~.checkmark {
+    border-color: #ccc;
+}
+
+.custom-checkbox input:checked~.checkmark {
+    background-color: #0084ff;
+    border-color: #0084ff;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom-checkbox input:checked~.checkmark:after {
+    display: block;
+}
+
+.custom-checkbox .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-text {
+    margin-left: 5px;
+    color: #333;
+}
+
+.checkbox-description {
+    display: block;
+    margin-left: 26px;
+    font-size: 11px;
+    color: #777;
 }
 
 /* Botón de registro */
 .register-btn {
-    background: #0073e6;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 12px;
-    margin-top: 10px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    transition: background 0.3s;
     width: 100%;
+    padding: 10px;
+    background-color: #0084ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 8px;
 }
 
 .register-btn:hover {
-    background: #005bb5;
+    background-color: #0076e5;
 }
 
-/* Términos y política */
+/* Texto de términos y condiciones */
 .terms {
-    font-size: 14px;
+    margin-top: 12px;
+    font-size: 11px;
     color: #777;
     text-align: center;
-    margin-top: 10px;
+    line-height: 1.4;
 }
 
 .terms a {
-    color: #0073e6;
+    color: #0084ff;
     text-decoration: none;
 }
 
@@ -141,22 +262,41 @@ form input {
     text-decoration: underline;
 }
 
-/* Link de inicio de sesión */
+/* Enlace para iniciar sesión */
 .login-link {
-    margin-top: 15px;
-    font-size: 16px;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #333;
     text-align: center;
 }
 
 .login-link a {
-    color: #0073e6;
+    color: #0084ff;
     text-decoration: none;
-    font-weight: bold;
     cursor: pointer;
-    transition: color 0.3s ease;
 }
 
 .login-link a:hover {
     text-decoration: underline;
-    color: #005bbf;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .right {
+        width: 100%;
+        height: 100%;
+    }
+
+    .form-container {
+        width: 90%;
+        padding: 20px 0;
+    }
 }
