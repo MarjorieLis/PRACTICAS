@@ -8,6 +8,7 @@ import { FotosComponent } from './components/fotos/fotos.component';
 import { IconosComponent } from './components/iconos/iconos.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { PlantillasComponent } from './components/plantillas/plantillas.component';
+import { TerminosCreadorComponent } from './components/terminos-creador/terminos-creador.component';
 
 
 export const routes: Routes = [
@@ -18,6 +19,7 @@ export const routes: Routes = [
     { path: 'iconos', component: IconosComponent }, 
     { path: 'videos', component: VideosComponent },
     { path: 'plantillas', component: PlantillasComponent },
+    { path: 'terminos-creador', component: TerminosCreadorComponent },
 
     { path: '', component: MediaLibraryComponent },
     { path: '**', redirectTo: '' }

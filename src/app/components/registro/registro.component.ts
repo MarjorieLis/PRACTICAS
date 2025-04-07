@@ -30,7 +30,13 @@ export class RegistroComponent {
       alert('Las contraseñas no coinciden');
       return;
     }
-
+  
     console.log('Usuario registrado:', this.usuario);
+  
+    if (this.usuario.esCreador) {
+      this.router.navigate(['/terminos-creador']);
+    } else {
+      this.router.navigate(['/home']);
+    }
   }
 }
