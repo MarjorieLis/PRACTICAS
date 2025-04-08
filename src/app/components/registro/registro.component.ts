@@ -1,17 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
   styleUrls: ['./registro.component.css'],
-  standalone: true, // ✅ ¡Importante!
-  imports: [CommonModule, FormsModule] // ✅ Para que funcione [(ngModel)]
+  standalone: true,
+  imports: [CommonModule, FormsModule]
 })
 export class RegistroComponent {
+  // ✅ Inyección del Router para navegación
+  private router = inject(Router);
+
   usuario = {
     nombreCompleto: '',
     correoElectronico: '',
@@ -20,12 +22,9 @@ export class RegistroComponent {
     esCreador: false
   };
 
-  passwordVisible: boolean = false; // Para mostrar u ocultar la contraseña
-  confirmPasswordVisible: boolean = false; // Para mostrar u ocultar la contraseña de confirmación
+  passwordVisible: boolean = false;
+  confirmPasswordVisible: boolean = false;
 
-  constructor(private router: Router) {}
-
-  // Función para cambiar la visibilidad de la contraseña
   togglePasswordVisibility(field: string) {
     if (field === 'contrasena') {
       this.passwordVisible = !this.passwordVisible;
@@ -43,9 +42,9 @@ export class RegistroComponent {
       alert('Las contraseñas no coinciden');
       return;
     }
-  
+
     console.log('Usuario registrado:', this.usuario);
-  
+
     if (this.usuario.esCreador) {
       this.router.navigate(['/terminos-creador']);
     } else {
