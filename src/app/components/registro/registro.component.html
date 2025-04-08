@@ -40,24 +40,46 @@
           />
         </div>
 
+        <!-- Contraseña -->
         <div class="input-group">
           <input
-            type="password"
+            [type]="passwordVisible ? 'text' : 'password'"
             placeholder="Contraseña"
             [(ngModel)]="usuario.contrasena"
             name="contrasena"
             required
           />
+          <button
+            type="button"
+            (click)="togglePasswordVisibility('contrasena')"
+            class="eye-button"
+          >
+            <img
+              [src]="passwordVisible ? 'assets/icons/eye-open.png' : 'assets/icons/eye-closed.png'"
+              alt="Mostrar/ocultar contraseña"
+            />
+          </button>
         </div>
 
+        <!-- Confirmar Contraseña -->
         <div class="input-group">
           <input
-            type="password"
+            [type]="confirmPasswordVisible ? 'text' : 'password'"
             placeholder="Confirmar contraseña"
             [(ngModel)]="usuario.confirmarContrasena"
             name="confirmarContrasena"
             required
           />
+          <button
+            type="button"
+            (click)="togglePasswordVisibility('confirmarContrasena')"
+            class="eye-button"
+          >
+            <img
+              [src]="confirmPasswordVisible ? 'assets/icons/eye-open.png' : 'assets/icons/eye-closed.png'"
+              alt="Mostrar/ocultar confirmar contraseña"
+            />
+          </button>
         </div>
 
         <div class="checkbox-container">

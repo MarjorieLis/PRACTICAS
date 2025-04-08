@@ -24,6 +24,7 @@
     "autoprefixer": "^10.4.21",
     "express": "^4.18.2",
     "feather-icons": "^4.29.2",
+    "font-awesome": "^4.7.0",
     "postcss": "^8.5.3",
     "rxjs": "~7.8.0",
     "tailwindcss": "^4.0.14",
