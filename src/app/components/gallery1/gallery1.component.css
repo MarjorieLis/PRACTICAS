@@ -19,26 +19,28 @@ p {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
-    justify-content: center;
-    align-items: center; /* Centra los elementos */
+    justify-items: center;
 }
 
 .gallery-item {
     position: relative;
+    width: 100%;
+    height: 180px;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+
 .gallery-item img {
     width: 100%;
-    height: 200px; /* Establece una altura fija */
+    height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease-in-out;
 }
+
 
 .gallery-item:hover {
     transform: scale(1.03);
@@ -50,11 +52,11 @@ p {
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 12px;
-    background: rgba(0, 0, 0, 0.7); /* Un poco más oscuro */
+    padding: 10px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
     color: white;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center; /* Centra el texto */
-    border-radius: 0 0 12px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 15px;
 }
