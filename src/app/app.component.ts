@@ -10,6 +10,7 @@ import { Gallery1Component } from './components/gallery1/gallery1.component';
 import { CarouselGalleryComponent } from './components/carousel-gallery/carousel-gallery.component';
 import { ResourceCategoriesComponent } from './components/resource-categories/resource-categories.component';
 import { SearchComponent } from './components/search/search.component';
+import { EstadisticasComponent } from './components/estadisticas/estadisticas.component';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +26,8 @@ import { SearchComponent } from './components/search/search.component';
     Gallery1Component,
     CarouselGalleryComponent,
     ResourceCategoriesComponent,
-    SearchComponent
+    SearchComponent,
+    EstadisticasComponent
   ]
 })
 export class AppComponent {
