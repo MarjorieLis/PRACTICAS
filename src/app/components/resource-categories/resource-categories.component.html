@@ -1,16 +1,17 @@
 <div class="container">
   <h2>Millones de archivos listos para usar</h2>
+  
   <div class="categories">
-    <div *ngFor="let category of categories" (click)="navigateToCategory(category)">
+    <div *ngFor="let category of categories" (click)="navigateToCategory(category)" class="category-box">
       <div class="category-item">
         <img [src]="category.icon" [alt]="category.name" />
         <h3>{{ category.name }}</h3>
       </div>
     </div>
-    
   </div>
-
-  <h3>Millones de equipos confían en nosotros</h3>
+  
+  <h2 class="companies-heading">Millones de equipos creativos, profesionales del marketing y diseñadores depositan su confianza en Freepik</h2>
+  
   <div class="companies">
     <div *ngFor="let company of companies" class="company-logo">
       <img [src]="company.logoUrl" [alt]="company.altText">
