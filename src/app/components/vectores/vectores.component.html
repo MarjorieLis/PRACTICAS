@@ -38,4 +38,23 @@
         }
       </div>
     </div>
+    <!-- Añade esta sección dentro de tu template existente -->
+<div class="featured-container">
+  <div class="featured-header">
+    <h2>Los vectores más destacados</h2>
+    <button class="discover-button">Descubrir vectores gratuitos</button>
   </div>
+  
+  <div class="featured-gallery">
+    <div class="gallery-item main-item">
+      <img [src]="featuredVectors[0].imageUrl" [alt]="featuredVectors[0].altText">
+    </div>
+    
+    <div class="gallery-grid">
+      <div class="gallery-item" *ngFor="let vector of featuredVectors.slice(1)">
+        <img [src]="vector.imageUrl" [alt]="vector.altText">
+      </div>
+    </div>
+  </div>
+</div>
+</div>

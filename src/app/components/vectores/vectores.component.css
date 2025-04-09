@@ -1,3 +1,4 @@
+/* Tus estilos existentes */
 .gallery-container {
     width: 100%;
     padding: 20px 0;
@@ -89,5 +90,122 @@
 
     .card-content {
         min-height: 150px;
+    }
+}
+
+/* Nuevos estilos para la sección de vectores destacados */
+.featured-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.featured-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.featured-header h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+}
+
+.discover-button {
+    background-color: #000;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.discover-button:hover {
+    background-color: #333;
+}
+
+.featured-gallery {
+    display: flex;
+    gap: 16px;
+}
+
+.main-item {
+    flex: 0 0 40%;
+    height: 440px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.gallery-grid {
+    flex: 0 0 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive para la sección de vectores destacados */
+@media (max-width: 900px) {
+    .featured-gallery {
+        flex-direction: column;
+    }
+    
+    .main-item {
+        height: 350px;
+        flex: none;
+        width: 100%;
+    }
+    
+    .gallery-grid {
+        flex: none;
+        width: 100%;
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .featured-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
+    }
+    
+    .gallery-item {
+        height: 200px;
     }
 }
