@@ -18,8 +18,8 @@
       class="search-input"
     />
     <div class="search-icons">
-      <button class="translate-icon">🌐</button>
-      <button class="settings-icon">⚙️</button>
+      <button class="translate-icon" title="Cambiar idioma">🌐</button>
+      <button class="settings-icon" title="Configuración">⚙️</button>
     </div>
     <button class="search-button">Buscar</button>
   </div>
@@ -31,7 +31,7 @@
       <p>Crear contenido basado en tu búsqueda</p>
 
       <div class="resource-grid">
-        <div class="resource-item" *ngFor="let option of searchOptions">
+        <div class="resource-item" *ngFor="let option of searchOptions" (click)="onCreateResource(option)">
           <div class="resource-icon">{{ option.icon }}</div>
           <span>{{ option.title }}</span>
         </div>
