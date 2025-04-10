@@ -36,7 +36,7 @@ export class SearchComponent implements AfterViewInit, OnDestroy, OnInit {
     { icon: '📊', title: 'Presentación' }
   ];
 
-  categories = ['Todo', 'Imagen', 'Video', 'Diseño', 'Texto', 'Audio', 'Presentación'];
+  // categories = ['Todo', 'Imagen', 'Video', 'Diseño', 'Texto', 'Audio', 'Presentación'];
 
   galleryItems = [
     { src: 'assets/images/ai-generator.jpg', title: 'Generador de imágenes con IA', description: 'Convierte las palabras en imágenes' },
