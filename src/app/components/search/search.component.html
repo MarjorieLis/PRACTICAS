@@ -38,4 +38,35 @@
       </div>
     </div>
   </div>
+</div> <!-- 👈 Cierre correcto de search-container -->
+
+<!-- Carrusel de categorías -->
+<div class="carousel-gallery">
+  <!-- Categorías -->
+  <div class="categories">
+    <span
+      *ngFor="let category of categories"
+      [class.active]="category === activeCategory"
+      (click)="setActiveCategory(category)">
+      {{ category }}
+    </span>
+  </div>
+
+  <!-- Contenedor del carrusel -->
+  <div class="gallery-wrapper">
+    <button class="scroll-btn left" (click)="scrollGallery('left')">‹</button>
+
+    <div class="gallery-container" #galleryContainer>
+      <div class="gallery-item" *ngFor="let item of galleryItems">
+        <img [src]="item.src" [alt]="item.title" />
+        <div class="info">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+          <span *ngIf="item.badge" class="badge">{{ item.badge }}</span>
+        </div>
+      </div>
+    </div>
+
+    <button class="scroll-btn right" (click)="scrollGallery('right')">›</button>
+  </div>
 </div>

@@ -7,7 +7,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { Gallery1Component } from './components/gallery1/gallery1.component';
-import { CarouselGalleryComponent } from './components/carousel-gallery/carousel-gallery.component';
 import { ResourceCategoriesComponent } from './components/resource-categories/resource-categories.component';
 import { SearchComponent } from './components/search/search.component';
 import { EstadisticasComponent } from './components/estadisticas/estadisticas.component';
@@ -24,7 +23,6 @@ import { EstadisticasComponent } from './components/estadisticas/estadisticas.co
     FooterComponent,
     GalleryComponent,
     Gallery1Component,
-    CarouselGalleryComponent,
     ResourceCategoriesComponent,
     SearchComponent,
     EstadisticasComponent
