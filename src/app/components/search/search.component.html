@@ -38,35 +38,47 @@
       </div>
     </div>
   </div>
-</div> <!-- 👈 Cierre correcto de search-container -->
+</div>
 
-<!-- Carrusel de categorías -->
+<!-- ===== Carrusel de Galería ===== -->
 <div class="carousel-gallery">
-  <!-- Categorías -->
+  <h2>Recomendaciones populares</h2>
+
   <div class="categories">
     <span
       *ngFor="let category of categories"
-      [class.active]="category === activeCategory"
-      (click)="setActiveCategory(category)">
+      [class.active]="activeCategory === category"
+      (click)="setActiveCategory(category)"
+    >
       {{ category }}
     </span>
   </div>
 
-  <!-- Contenedor del carrusel -->
   <div class="gallery-wrapper">
-    <button class="scroll-btn left" (click)="scrollGallery('left')">‹</button>
-
-    <div class="gallery-container" #galleryContainer>
+    <button class="scroll-btn left" (click)="scrollGallery('left')">←</button>
+    <div #galleryContainer class="gallery-container">
       <div class="gallery-item" *ngFor="let item of galleryItems">
         <img [src]="item.src" [alt]="item.title" />
         <div class="info">
           <h3>{{ item.title }}</h3>
           <p>{{ item.description }}</p>
-          <span *ngIf="item.badge" class="badge">{{ item.badge }}</span>
         </div>
+        <div class="badge" *ngIf="item.badge">{{ item.badge }}</div>
       </div>
     </div>
+    <button class="scroll-btn right" (click)="scrollGallery('right')">→</button>
+  </div>
+</div>
 
-    <button class="scroll-btn right" (click)="scrollGallery('right')">›</button>
+<!-- ===== Galería Adicional: Lo que más está gustando ===== -->
+<div class="gallery-section">
+  <h2>Lo que más está gustando</h2>
+  <p>Explora contenido visual generado por otros usuarios</p>
+
+  <div class="gallery">
+    <div class="gallery-item" *ngFor="let image of images">
+      <img [src]="image.src" [alt]="image.title" />
+      <div class="gallery-caption">{{ image.title }}</div>
+    </div>
   </div>
 </div>

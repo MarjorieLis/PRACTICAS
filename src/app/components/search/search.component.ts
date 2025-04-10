@@ -7,11 +7,12 @@ import {
   OnDestroy
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-search',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
@@ -48,12 +49,23 @@ export class SearchComponent implements AfterViewInit, OnDestroy {
     { src: 'assets/images/personajes.jpg', title: 'Crear personajes', description: 'Crea un personaje y descubre sus posibilidades' }
   ];
 
+  images = [
+    { src: 'assets/images/fitness.jpg', title: 'Vídeos De Fitness' },
+    { src: 'assets/images/colorful.jpg', title: 'Fondos Coloridos' },
+    { src: 'assets/images/patrick.jpg', title: 'Imágenes Del Día De San Patricio' },
+    { src: 'assets/images/butterfly.jpg', title: 'Fondos De Mariposa' },
+    { src: 'assets/images/clouds.jpg', title: 'Vídeos De Nubes' },
+    { src: 'assets/images/festival.jpg', title: 'Fotos De Festivales' },
+    { src: 'assets/images/green.jpg', title: 'Fondos Verdes' },
+    { src: 'assets/images/ramadan.jpg', title: 'Vídeos Del Ramadán' },
+    { src: 'assets/images/magazine.jpg', title: 'Mockups De Revistas' }
+  ];
+
   constructor(private renderer: Renderer2) {
     this.globalClickListener = () => {};
   }
 
   ngAfterViewInit() {
-    // Escuchar los clics fuera del componente
     this.globalClickListener = this.renderer.listen('document', 'click', (event: MouseEvent) => {
       const target = event.target as HTMLElement;
       if (
@@ -67,7 +79,6 @@ export class SearchComponent implements AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    // Limpiar el listener
     if (this.globalClickListener) {
       this.globalClickListener();
     }
