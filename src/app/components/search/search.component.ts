@@ -4,7 +4,8 @@ import {
   Renderer2,
   ViewChild,
   AfterViewInit,
-  OnDestroy
+  OnDestroy,
+  OnInit
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -16,14 +17,14 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
-export class SearchComponent implements AfterViewInit, OnDestroy {
+export class SearchComponent implements AfterViewInit, OnDestroy, OnInit {
   @ViewChild('dropdownMenu', { static: false }) dropdownMenu!: ElementRef;
   @ViewChild('searchInput', { static: false }) searchInput!: ElementRef;
   @ViewChild('galleryContainer', { static: false }) galleryContainer!: ElementRef;
 
   isDropdownVisible = false;
   searchQuery = '';
-
+  activeCategory = 'Todo';
   private globalClickListener: () => void;
 
   searchOptions = [
@@ -35,8 +36,7 @@ export class SearchComponent implements AfterViewInit, OnDestroy {
     { icon: '📊', title: 'Presentación' }
   ];
 
-  categories = ['Todo'];
-  activeCategory = 'Todo';
+  categories = ['Todo', 'Imagen', 'Video', 'Diseño', 'Texto', 'Audio', 'Presentación'];
 
   galleryItems = [
     { src: 'assets/images/ai-generator.jpg', title: 'Generador de imágenes con IA', description: 'Convierte las palabras en imágenes' },
@@ -49,20 +49,38 @@ export class SearchComponent implements AfterViewInit, OnDestroy {
     { src: 'assets/images/personajes.jpg', title: 'Crear personajes', description: 'Crea un personaje y descubre sus posibilidades' }
   ];
 
-  images = [
-    { src: 'assets/images/fitness.jpg', title: 'Vídeos De Fitness' },
-    { src: 'assets/images/colorful.jpg', title: 'Fondos Coloridos' },
-    { src: 'assets/images/patrick.jpg', title: 'Imágenes Del Día De San Patricio' },
-    { src: 'assets/images/butterfly.jpg', title: 'Fondos De Mariposa' },
-    { src: 'assets/images/clouds.jpg', title: 'Vídeos De Nubes' },
-    { src: 'assets/images/festival.jpg', title: 'Fotos De Festivales' },
-    { src: 'assets/images/green.jpg', title: 'Fondos Verdes' },
-    { src: 'assets/images/ramadan.jpg', title: 'Vídeos Del Ramadán' },
-    { src: 'assets/images/magazine.jpg', title: 'Mockups De Revistas' }
+  popularImages = [
+    { src: 'assets/images/fitness.jpg', title: 'Vídeos De Fitness', alt: 'Vídeos De Fitness' },
+    { src: 'assets/images/colorful.jpg', title: 'Fondos Coloridos', alt: 'Fondos Coloridos' },
+    { src: 'assets/images/patrick.jpg', title: 'Imágenes Del Día De San Patricio', alt: 'Imágenes Del Día De San Patricio' },
+    { src: 'assets/images/butterfly.jpg', title: 'Fondos De Mariposa', alt: 'Fondos De Mariposa' },
+    { src: 'assets/images/clouds.jpg', title: 'Vídeos De Nubes', alt: 'Vídeos De Nubes' },
+    { src: 'assets/images/festival.jpg', title: 'Fotos De Festivales', alt: 'Fotos De Festivales' },
+    { src: 'assets/images/green.jpg', title: 'Fondos Verdes', alt: 'Fondos Verdes' },
+    { src: 'assets/images/ramadan.jpg', title: 'Vídeos Del Ramadán', alt: 'Vídeos Del Ramadán' },
+    { src: 'assets/images/magazine.jpg', title: 'Mockups De Revistas', alt: 'Mockups De Revistas' }
   ];
+
+  inspireImages = [
+    { src: 'assets/images/img1.jpg', alt: 'Descripción 1' },
+    { src: 'assets/images/img2.jpg', alt: 'Descripción 2' },
+    { src: 'assets/images/img3.jpg', alt: 'Descripción 3' },
+    { src: 'assets/images/img4.jpg', alt: 'Descripción 4' },
+    { src: 'assets/images/img5.jpg', alt: 'Descripción 5' },
+    { src: 'assets/images/img6.jpg', alt: 'Descripción 6' },
+    { src: 'assets/images/img7.jpg', alt: 'Descripción 7' },
+    { src: 'assets/images/img8.jpg', alt: 'Descripción 8' },
+    { src: 'assets/images/img9.jpg', alt: 'Descripciónn 9' },
+    { src: 'assets/images/img10.jpg', alt: 'Descripción 10' },
+  ];
+
 
   constructor(private renderer: Renderer2) {
     this.globalClickListener = () => {};
+  }
+
+  ngOnInit() {
+    // Cualquier lógica de inicialización adicional aquí si es necesario
   }
 
   ngAfterViewInit() {
@@ -114,5 +132,12 @@ export class SearchComponent implements AfterViewInit, OnDestroy {
 
   setActiveCategory(category: string) {
     this.activeCategory = category;
+  }
+
+  getFilteredGalleryItems() {
+    if (this.activeCategory === 'Todo') {
+      return this.galleryItems;
+    }
+    return this.galleryItems.filter(item => item.title.includes(this.activeCategory));
   }
 }

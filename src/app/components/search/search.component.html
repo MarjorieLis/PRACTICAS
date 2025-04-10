@@ -40,7 +40,7 @@
   </div>
 </div>
 
-<!-- ===== Carrusel de Galería ===== -->
+<!-- Carrusel de Galería -->
 <div class="carousel-gallery">
   <h2>Recomendaciones populares</h2>
 
@@ -70,15 +70,25 @@
   </div>
 </div>
 
-<!-- ===== Galería Adicional: Lo que más está gustando ===== -->
+<!-- Sección Lo que más está gustando -->
 <div class="gallery-section">
   <h2>Lo que más está gustando</h2>
   <p>Explora contenido visual generado por otros usuarios</p>
 
   <div class="gallery">
-    <div class="gallery-item" *ngFor="let image of images">
+    <div class="gallery-item" *ngFor="let image of popularImages">
       <img [src]="image.src" [alt]="image.title" />
       <div class="gallery-caption">{{ image.title }}</div>
     </div>
   </div>
+</div>
+
+<!-- Sección Inspírate -->
+<div class="inspiration-section">
+  <h1>Inspírate</h1>
+  <p>Descubre miles de imágenes increíbles creadas por los artistas especialistas en IA de Freepik</p>
+  
+  <div class="gallery">
+    <img *ngFor="let image of inspireImages" [src]="image.src" [alt]="image.alt">
+  </div> 
 </div>
