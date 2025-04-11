@@ -5,7 +5,7 @@ import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { SearchComponent } from './components/search/search.component';
+import { SearchComponent } from './components/home-page/search.component';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +18,6 @@ import { SearchComponent } from './components/search/search.component';
     HeaderComponent,
     FooterComponent,
     SearchComponent,
-  
   ]
 })
 export class AppComponent {

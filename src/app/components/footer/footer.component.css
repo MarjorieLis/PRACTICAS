@@ -1,24 +1,22 @@
 .footer {
     background-color: #111;
-    color: white;
-    padding: 20px 40px;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.footer-section {
-    flex: 1;
-    min-width: 200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .footer-section h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #00aaff;
 }
 
 .footer-section ul {
@@ -27,65 +25,85 @@
 }
 
 .footer-section ul li {
-    margin: 5px 0;
+    margin: 8px 0;
 }
 
 .footer-section ul li a {
     color: #bbb;
     text-decoration: none;
     font-size: 14px;
+    transition: color 0.3s;
 }
 
 .footer-section ul li a:hover {
-    color: white;
+    color: #fff;
 }
 
-.redes-sociales .social-icons {
+.social-icons {
     display: flex;
-    gap: 8px;
+    gap: 10px;
     margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 
-.redes-sociales .social-icons img {
-    width: 30px;
-    height: 30px;
+.social-icons img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
 }
 
 .register-btn {
-    background-color: #0066ff;
+    background-color: #00aaff;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 10px 20px;
     font-size: 14px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 25px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
 }
 
 .register-btn:hover {
-    background-color: #004bcc;
+    background-color: #0088cc;
 }
 
 .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     border-top: 1px solid #444;
-    padding-top: 10px;
-    margin-top: 10px;
-    font-size: 12px;
+    margin-top: 30px;
+    padding-top: 15px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
 }
 
 .language-btn {
     background-color: transparent;
     color: white;
     border: 1px solid white;
-    padding: 5px 10px;
-    cursor: pointer;
+    padding: 6px 12px;
     font-size: 12px;
-    border-radius: 5px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .language-btn:hover {
     background-color: white;
     color: black;
+}
+
+@media (min-width: 768px) {
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 0;
+    }
 }
