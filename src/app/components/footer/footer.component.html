@@ -62,6 +62,17 @@
 
   <div class="footer-bottom">
     <p>© 2010-2025 Freepik Company S.L. Todos los derechos reservados.</p>
-    <button class="language-btn">Español ▼</button>
-  </div>
+    <div class="language-selector" (click)="toggleIdiomaDropdown()" tabindex="0" (blur)="cerrarDropdown()">
+      <button class="language-btn">
+        {{ idiomaActual }} ▼
+      </button>
+      <ul class="idioma-dropdown" *ngIf="mostrarIdiomas">
+        <li (click)="cambiarIdioma('Español')">Español</li>
+        <li (click)="cambiarIdioma('Inglés')">Inglés</li>
+        <li (click)="cambiarIdioma('Francés')">Francés</li>
+        <li (click)="cambiarIdioma('Alemán')">Alemán</li>
+      </ul>
+    </div>
+  </div> <!-- ← faltaba este cierre -->
 </footer>
+
