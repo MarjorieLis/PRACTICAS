@@ -43,13 +43,7 @@
 <!-- Carrusel de Galería -->
 <div class="carousel-gallery">
   <div class="categories">
-    <!-- <span
-      *ngFor="let category of categories"
-      [class.active]="activeCategory === category"
-      (click)="setActiveCategory(category)"
-    >
-      {{ category }}
-    </span> -->
+    <!-- Aquí puedes agregar categorías si lo necesitas -->
   </div>
 
   <div class="gallery-wrapper">
@@ -65,6 +59,33 @@
       </div>
     </div>
     <button class="scroll-btn right" (click)="scrollGallery('right')">→</button>
+  </div>
+</div>
+
+<!-- Nueva Sección - Millones de archivos listos para usar -->
+<div class="resources-container">
+  <h2 class="resources-title">Millones de archivos listos para usar</h2>
+  
+  <div class="resources-categories">
+    <div *ngFor="let category of categories" 
+         (click)="navigateToCategory(category)" 
+         class="category-item">
+      <div class="category-icon">
+        <img [src]="category.icon" [alt]="category.name">
+      </div>
+      <span>{{ category.name }}</span>
+    </div>
+  </div>
+  
+  <div class="trust-section">
+    <h2 class="trust-title">Millones de equipos creativos, profesionales del marketing y diseñadores depositan su confianza en Freepik</h2>
+    
+    <div class="company-logos">
+      <div *ngFor="let company of companies" class="logo-item">
+        <img [src]="company.logoUrl" [alt]="company.altText">
+        <span>{{ company.name }}</span>
+      </div>
+    </div>
   </div>
 </div>
 

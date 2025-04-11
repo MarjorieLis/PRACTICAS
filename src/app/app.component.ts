@@ -5,7 +5,6 @@ import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { ResourceCategoriesComponent } from './components/resource-categories/resource-categories.component';
 import { SearchComponent } from './components/search/search.component';
 import { EstadisticasComponent } from './components/estadisticas/estadisticas.component';
 
@@ -19,7 +18,6 @@ import { EstadisticasComponent } from './components/estadisticas/estadisticas.co
     RouterOutlet,
     HeaderComponent,
     FooterComponent,
-    ResourceCategoriesComponent,
     SearchComponent,
     EstadisticasComponent
   ]

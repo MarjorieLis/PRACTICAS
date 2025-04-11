@@ -9,6 +9,19 @@ import {
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+
+interface ResourceCategory {
+  icon: string;
+  name: string;
+  route: string;
+}
+
+interface Company {
+  name: string;
+  logoUrl: string;
+  altText: string;
+}
 
 @Component({
   selector: 'app-search',
@@ -35,8 +48,6 @@ export class SearchComponent implements AfterViewInit, OnDestroy, OnInit {
     { icon: '🔊', title: 'Audio' },
     { icon: '📊', title: 'Presentación' }
   ];
-
-  // categories = ['Todo', 'Imagen', 'Video', 'Diseño', 'Texto', 'Audio', 'Presentación'];
 
   galleryItems = [
     { src: 'assets/images/ai-generator.jpg', title: 'Generador de imágenes con IA', description: 'Convierte las palabras en imágenes' },
@@ -70,12 +81,29 @@ export class SearchComponent implements AfterViewInit, OnDestroy, OnInit {
     { src: 'assets/images/img6.jpg', alt: 'Descripción 6' },
     { src: 'assets/images/img7.jpg', alt: 'Descripción 7' },
     { src: 'assets/images/img8.jpg', alt: 'Descripción 8' },
-    { src: 'assets/images/img9.jpg', alt: 'Descripciónn 9' },
-    { src: 'assets/images/img10.jpg', alt: 'Descripción 10' },
+    { src: 'assets/images/img9.jpg', alt: 'Descripción 9' },
+    { src: 'assets/images/img10.jpg', alt: 'Descripción 10' }
   ];
 
+  categories: ResourceCategory[] = [
+    { icon: 'assets/icons/vector.png', name: 'Vectores', route: '/vectores' },
+    { icon: 'assets/icons/fotos.png', name: 'Fotos', route: '/fotos' },
+    { icon: 'assets/icons/ilustraciones.png', name: 'Ilustraciones', route: '/ilustraciones' },
+    { icon: 'assets/icons/iconos.png', name: 'Iconos', route: '/iconos' },
+    { icon: 'assets/icons/videos.png', name: 'Videos', route: '/videos' },
+    { icon: 'assets/icons/plantillas.png', name: 'Plantillas', route: '/plantillas' },
+    { icon: 'assets/icons/psd.png', name: 'PSD', route: '/psd' },
+    { icon: 'assets/icons/mockup.png', name: 'Mockups', route: '/mockups' }
+  ];
 
-  constructor(private renderer: Renderer2) {
+  companies: Company[] = [
+    { name: 'Airbnb', logoUrl: 'assets/logos/airbnb.png', altText: 'Airbnb logo' },
+    { name: 'Google', logoUrl: 'assets/logos/google.png', altText: 'Google logo' },
+    { name: 'Coca Cola', logoUrl: 'assets/logos/cocacola.png', altText: 'Coca Cola logo' },
+    { name: 'Snowflake', logoUrl: 'assets/logos/snowflake.png', altText: 'Snowflake logo' }
+  ];
+
+  constructor(private renderer: Renderer2, private router: Router) {
     this.globalClickListener = () => {};
   }
 
@@ -139,5 +167,10 @@ export class SearchComponent implements AfterViewInit, OnDestroy, OnInit {
       return this.galleryItems;
     }
     return this.galleryItems.filter(item => item.title.includes(this.activeCategory));
+  }
+
+  navigateToCategory(category: ResourceCategory): void {
+    console.log(`Navegando a ${category.name}`);
+    this.router.navigate([category.route]);
   }
 }

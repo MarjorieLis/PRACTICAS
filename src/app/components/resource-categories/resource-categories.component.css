@@ -1,3 +1,4 @@
+/* ===== Contenedor General ===== */
 .container {
     max-width: 1200px;
     margin: auto;
@@ -6,6 +7,387 @@
     padding: 20px;
 }
 
+/* ===== Texto Principal ===== */
+.hero-text {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* ===== Barra de Búsqueda ===== */
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    padding: 5px 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
+}
+
+.search-icons button {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #666;
+    transition: color 0.2s;
+}
+
+.search-icons button:hover {
+    color: #1a73e8;
+}
+
+.search-button {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-button:hover {
+    background-color: #1558c2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Dropdown ===== */
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 650px;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 20px;
+    z-index: 1000;
+    text-align: left;
+}
+
+.dropdown-section {
+    margin-bottom: 20px;
+}
+
+.dropdown-section h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.dropdown-section p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.resource-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.2s;
+    background-color: #f8f9fa;
+}
+
+.resource-item:hover {
+    background-color: #f0f4fe;
+    transform: translateY(-2px);
+}
+
+.resource-icon {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e8f0fe;
+    border-radius: 8px;
+    color: #1a73e8;
+}
+
+.resource-item span {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* ===== Carrusel de Galería ===== */
+.carousel-gallery {
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.categories span {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #a0a0a0;
+    transition: color 0.3s ease;
+}
+
+.categories .active {
+    color: white;
+}
+
+.gallery-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.gallery-container {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 20px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    white-space: nowrap;
+    justify-content: center;
+}
+
+.gallery-container::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-item {
+    position: relative;
+    width: 220px;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item:hover {
+    transform: scale(1.07);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.gallery-item .info {
+    padding: 12px;
+}
+
+.gallery-item h3 {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.gallery-item p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.badge {
+    background-color: #ff9800;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 12px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.scroll-btn {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.scroll-btn:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.1);
+}
+
+.left {
+    left: 5px;
+}
+
+.right {
+    right: 5px;
+}
+
+/* ===== Sección Lo que más está gustando ===== */
+.gallery-section {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery-section h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.gallery-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.gallery-section .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.gallery-section .gallery-item {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gallery-section .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-section .gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-section .gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 15px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+}
+
+/* ===== Sección "Inspírate" ===== */
+.inspiration-section {
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.inspiration-section .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.inspiration-section .gallery img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+/* ===== Categorías y Empresas Destacadas ===== */
 h2 {
     font-size: 28px;
     margin-bottom: 30px;
@@ -93,6 +475,7 @@ h2 {
     color: #666;
 }
 
+/* ===== Títulos Adicionales ===== */
 .trending-heading {
     font-size: 28px;
     margin-bottom: 10px;
@@ -102,4 +485,21 @@ h2 {
     font-size: 16px;
     color: #666;
     margin-bottom: 40px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .gallery-container {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .gallery-item {
+        width: 180px;
+    }
+
+    .scroll-btn {
+        font-size: 18px;
+        padding: 8px;
+    }
 }
