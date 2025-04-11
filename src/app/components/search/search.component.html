@@ -104,11 +104,13 @@
 
 <!-- Sección Inspírate -->
 <div class="inspiration-section">
-  <h1>Inspírate</h1>
+  <h2>Inspírate</h2>
   <p>Descubre miles de imágenes increíbles creadas por los artistas especialistas en IA de Freepik</p>
   
-  <div class="gallery">
-    <img *ngFor="let image of inspireImages" [src]="image.src" [alt]="image.alt">
+  <div class="inspiration-gallery">
+    <div class="gallery-img" *ngFor="let image of inspireImages">
+      <img [src]="image.src" [alt]="image.alt">
+    </div>
   </div> 
 </div>
 

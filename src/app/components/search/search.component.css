@@ -370,20 +370,117 @@
 .inspiration-section {
     text-align: center;
     max-width: 1200px;
-    margin: auto;
+    margin: 40px auto;
     padding: 20px;
 }
 
-.inspiration-section .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
+.inspiration-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
 }
 
-.inspiration-section .gallery img {
-    width: 100%;
+.inspiration-section p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inspiration-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+    gap: 15px;
+    grid-auto-flow: dense;
+}
+
+.gallery-img {
+    overflow: hidden;
     border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.02);
+}
+
+.gallery-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-img:hover img {
+    transform: scale(1.1);
+}
+
+/* Definir tamaños específicos para algunas imágenes */
+.gallery-img:nth-child(4n+1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.gallery-img:nth-child(8n+3) {
+    grid-column: span 2;
+}
+
+.gallery-img:nth-child(12n+8) {
+    grid-row: span 2;
+}
+
+/* Responsive para tablets */
+@media (max-width: 992px) {
+    .inspiration-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .gallery-img:nth-child(4n+1) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    
+    .gallery-img:nth-child(6n+3) {
+        grid-column: span 2;
+    }
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .inspiration-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 180px;
+    }
+    
+    .gallery-img:nth-child(6n+3) {
+        grid-column: span 1;
+    }
+    
+    .gallery-img:nth-child(4n+2) {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .inspiration-gallery {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+    
+    .gallery-img {
+        grid-column: span 1 !important;
+    }
+    
+    .inspiration-section h2 {
+        font-size: 26px;
+    }
 }
 
 /* ===== Nueva Sección - Archivos listos para usar ===== */
