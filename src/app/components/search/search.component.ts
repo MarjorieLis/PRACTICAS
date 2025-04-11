@@ -173,4 +173,8 @@ export class SearchComponent implements AfterViewInit, OnDestroy, OnInit {
     console.log(`Navegando a ${category.name}`);
     this.router.navigate([category.route]);
   }
+  
+  irARegistro() {
+    this.router.navigate(['/registro']);
+  }
 }

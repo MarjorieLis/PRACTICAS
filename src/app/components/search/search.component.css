@@ -542,3 +542,121 @@
         padding: 10px;
     }
 }
+
+/* ===== Sección de Estadísticas ===== */
+.estadisticas-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.titulo-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.titulo-section h3 {
+    color: #4285f4;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.titulo-section h1 {
+    font-size: 48px;
+    color: #212121;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.register-btn {
+    background-color: #0066ff;
+    color: white;
+    padding: 12px 26px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.stat-caption {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.stat-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Colores para las estadísticas */
+.turquesa {
+    color: #20c997;
+}
+
+.naranja {
+    color: #fd7e14;
+}
+
+.azul {
+    color: #4285f4;
+}
+
+.morado {
+    color: #a36ff3;
+}
+
+/* Responsive design para estadísticas */
+@media (max-width: 992px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .titulo-section h1 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 576px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .titulo-section h1 {
+        font-size: 32px;
+    }
+    
+    .stat-item {
+        margin-bottom: 20px;
+    }
+}

@@ -6,7 +6,6 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SearchComponent } from './components/search/search.component';
-import { EstadisticasComponent } from './components/estadisticas/estadisticas.component';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +18,7 @@ import { EstadisticasComponent } from './components/estadisticas/estadisticas.co
     HeaderComponent,
     FooterComponent,
     SearchComponent,
-    EstadisticasComponent
+  
   ]
 })
 export class AppComponent {
