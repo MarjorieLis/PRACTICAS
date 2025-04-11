@@ -3,34 +3,28 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    background-color: #f5f5f5;
+html, body {
+    height: 100%;
+    width: 100%;
     overflow: hidden;
+    background-color: #f5f5f5;
 }
 
+/* Contenedor principal */
 .container {
     display: flex;
-    width: 100vw;
     height: 100vh;
-    background: white;
+    width: 100vw;
 }
 
-/* Sección de la imagen */
+/* Sección de la imagen - 75% */
 .left {
-    width: 75%; /* antes: 50% */
-    height: 100vh;
+    flex: 3;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ddd;
+    overflow: hidden;
 }
 
 .left img {
@@ -39,122 +33,199 @@ body {
     object-fit: cover;
 }
 
-/* Sección del formulario */
+/* Sección del formulario - 25% */
 .right {
-    width: 25%; /* antes: 50% */
-    height: 100vh;
+    flex: 1;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    width: 100%;
+    max-width: 320px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px;
 }
 
+/* Título */
 h2 {
     font-size: 24px;
     font-weight: bold;
-    color: #0073e6;
+    color: #333;
+    text-align: center;
     margin-bottom: 20px;
 }
 
-/* Botones */
-.btn {
-    width: 100%;
-    max-width: 300px;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.btn img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-}
-
-.google {
-    background: white;
-    border: 1px solid #ccc;
-}
-
-.google:hover {
-    background: #f1f1f1;
-}
-
-.apple {
-    background: black;
-    color: white;
-}
-
-.apple:hover {
-    background: #333;
-}
-
-.separator {
-    font-size: 14px;
-    color: #777;
-    margin: 15px 0;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
 /* Campos de entrada */
-form {
-    width: 100%;
-    max-width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.input-group {
+    margin-bottom: 15px;
 }
 
-form input {
+.input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #0084ff;
+    outline: none;
+}
+
+/* Botón de login */
+.btn.login-btn {
     width: 100%;
     padding: 12px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.login-btn {
-    background: #0073e6;
+    background-color: #0073e6;
     color: white;
     font-size: 16px;
     font-weight: bold;
-    padding: 12px;
-    margin-top: 10px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
     transition: background 0.3s;
-    width: 100%;
 }
 
-.login-btn:hover {
+.btn.login-btn:hover {
     background: #005bb5;
 }
 
+/* Separador */
+.divider {
+    text-align: center;
+    margin: 15px 0;
+    color: #777;
+    font-size: 13px;
+}
+
+/* Botón Google */
+.btn.google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn.google:hover {
+    background-color: #f5f5f5;
+}
+
+.btn.google img {
+    width: 18px;
+    margin-right: 10px;
+}
+
+/* Enlace de registro */
 .registro-link {
+    text-align: center;
     margin-top: 15px;
     font-size: 14px;
+    color: #444;
 }
 
-.registro-link .link-registro {
+.link-registro {
     color: #0073e6;
     cursor: pointer;
-    text-decoration: underline;
-    transition: color 0.3s ease;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.registro-link .link-registro:hover {
-    color: #005bbf;
+.link-registro:hover {
     text-decoration: underline;
 }
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 40px; /* espacio para el icono */
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #666;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left {
+        display: none; /* Oculta la imagen */
+    }
+
+    .right {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .right h2 {
+        text-align: center;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .right form,
+    .btn.google,
+    .separator,
+    .registro-link {
+        width: 100%;
+        max-width: 320px; /* Mismo ancho para todo */
+    }
+
+    .btn.google {
+        box-sizing: border-box;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .registro-link {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+}
+

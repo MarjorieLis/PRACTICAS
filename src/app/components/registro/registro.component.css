@@ -253,12 +253,14 @@ input:focus {
     font-size: 13px;
     color: #333;
     text-align: center;
+
 }
 
 .login-link a {
     color: #0084ff;
     text-decoration: none;
     cursor: pointer; /* Añadir esta propiedad */
+    font-weight: bold;
 }
 
 
