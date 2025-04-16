@@ -16,6 +16,14 @@ interface FeaturedVector {
   title?: string;
 }
 
+// Nueva interfaz para los temas de vectores
+interface VectorTheme {
+  id: number;
+  title: string;
+  imageUrl: string;
+  category: string;
+}
+
 @Component({
   selector: 'app-vectores',
   templateUrl: './vectores.component.html',
@@ -26,6 +34,8 @@ interface FeaturedVector {
 export class VectoresComponent implements OnInit {
   categories: ImageCategory[] = [];
   featuredVectors: FeaturedVector[] = [];
+  vectorThemes: VectorTheme[] = [];
+  activeThemeCategory: string = 'Eventos';
   
   ngOnInit(): void {
     // Inicializa las categorías con datos de ejemplo
@@ -134,16 +144,108 @@ export class VectoresComponent implements OnInit {
         title: 'Arte celestial con ojos'
       }
     ];
+
+    // Inicializa los temas de vectores
+    this.vectorThemes = [
+      {
+        id: 1,
+        title: 'Vectores De Navidad',
+        imageUrl: 'assets/images/themes/navidad.jpg',
+        category: 'Eventos'
+      },
+      {
+        id: 2,
+        title: 'Vectores De Halloween',
+        imageUrl: 'assets/images/themes/halloween.jpg',
+        category: 'Eventos'
+      },
+      {
+        id: 3,
+        title: 'Vectores De Semana Santa',
+        imageUrl: 'assets/images/themes/semana-santa.jpg',
+        category: 'Eventos'
+      },
+      {
+        id: 4,
+        title: 'Vectores De Otoño',
+        imageUrl: 'assets/images/themes/otono.jpg',
+        category: 'Naturaleza'
+      },
+      {
+        id: 5,
+        title: 'Vectores De Primavera',
+        imageUrl: 'assets/images/themes/primavera.jpg',
+        category: 'Naturaleza'
+      },
+      {
+        id: 6,
+        title: 'Vectores De Verano',
+        imageUrl: 'assets/images/themes/verano.jpg',
+        category: 'Naturaleza'
+      },
+      {
+        id: 7,
+        title: 'Vectores De Año Nuevo',
+        imageUrl: 'assets/images/themes/ano-nuevo.jpg',
+        category: 'Eventos'
+      },
+      {
+        id: 8,
+        title: 'Vectores De Invierno',
+        imageUrl: 'assets/images/themes/invierno.jpg',
+        category: 'Naturaleza'
+      },
+      {
+        id: 9,
+        title: 'Vectores Del Día De La Madre',
+        imageUrl: 'assets/images/themes/dia-madre.jpg',
+        category: 'Eventos'
+      },
+      {
+        id: 10,
+        title: 'Vectores De Carnaval',
+        imageUrl: 'assets/images/themes/carnaval.jpg',
+        category: 'Eventos'
+      },
+      {
+        id: 11,
+        title: 'Vectores Del Día Del Padre',
+        imageUrl: 'assets/images/themes/dia-padre.jpg',
+        category: 'Eventos'
+      },
+      {
+        id: 12,
+        title: 'Vectores De San Valentín',
+        imageUrl: 'assets/images/themes/san-valentin.jpg',
+        category: 'Eventos'
+      },
+    ];
   }
 
   onCategoryClick(category: ImageCategory): void {
     console.log(`Categoría seleccionada: ${category.title}`);
-    // Aquí puedes agregar navegación a una vista detallada de la categoría
   }
-
+  
   navigateToVectorDetails(vector: FeaturedVector): void {
     console.log(`Navegando a detalles de: ${vector.title}`);
-    // Implementa la navegación si ya tienes configurado el router
-    // this.router.navigate(['/vectores/detalles', vector.title]);
+  }
+  
+  onThemeClick(theme: VectorTheme): void {
+    console.log(`Tema seleccionado: ${theme.title}`);
+  }
+  
+  setActiveThemeCategory(category: string): void {
+    this.activeThemeCategory = category;
+  }
+  
+  get filteredThemes(): VectorTheme[] {
+    return this.vectorThemes.filter(theme => 
+      this.activeThemeCategory === 'Todos' || theme.category === this.activeThemeCategory
+    );
+  }
+  
+  // Nueva función para navegar por nombre de tema
+  goToTheme(nombre: string): void {
+    console.log(`Navegando al tema: ${nombre}`);
   }
 }

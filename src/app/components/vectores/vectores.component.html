@@ -58,3 +58,26 @@
   </div>
 </div>
 </div>
+
+
+<!-- Temas de Vectores -->
+<div class="vector-themes">
+  <h2>¿Necesitas ideas para diseñar con vectores? Has venido al sitio adecuado</h2>
+  <p class="themes-subtitle">Descubre los temas más buscados y encuentra los vectores que necesitas</p>
+
+  <!-- Filtro de Categorías -->
+  <div class="theme-filters">
+    <button *ngFor="let category of ['Eventos', 'Objetos', 'Naturaleza', 'Otros']"
+            (click)="setActiveThemeCategory(category)">
+      {{ category }}
+    </button>
+  </div>
+
+  <!-- Cuadrícula de Temas -->
+  <div class="themes-grid">
+    <div class="theme-card" *ngFor="let theme of filteredThemes" (click)="onThemeClick(theme)">
+      <img [src]="theme.imageUrl" alt="{{ theme.title }}">
+      <h3>{{ theme.title }}</h3>
+    </div>
+  </div>
+</div>

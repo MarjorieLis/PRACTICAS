@@ -78,6 +78,99 @@
     display: inline-block;
 }
 
+.vector-themes {
+    margin-top: 60px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vector-themes h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+.themes-subtitle {
+    font-size: 16px;
+    color: #666;
+    max-width: 700px;
+    margin: 10px auto 30px;
+    text-align: center;
+}
+
+.theme-filters {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.theme-filters button {
+    padding: 10px 16px;
+    border: none;
+    background-color: #e5e5e5;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.theme-filters button:hover {
+    background-color: #d4d4d4;
+}
+
+.themes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+/* Tarjeta de tema */
+.theme-card {
+    position: relative;
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 160px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.theme-card:hover {
+    transform: translateY(-4px);
+}
+
+.theme-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.theme-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Título sobre la imagen */
+.theme-card h3 {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+
 /* Para pantallas pequeñas */
 @media (max-width: 768px) {
     .row {
@@ -179,13 +272,13 @@
     .featured-gallery {
         flex-direction: column;
     }
-    
+
     .main-item {
         height: 350px;
         flex: none;
         width: 100%;
     }
-    
+
     .gallery-grid {
         flex: none;
         width: 100%;
@@ -199,12 +292,12 @@
         align-items: flex-start;
         gap: 16px;
     }
-    
+
     .gallery-grid {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(8, 1fr);
     }
-    
+
     .gallery-item {
         height: 200px;
     }
