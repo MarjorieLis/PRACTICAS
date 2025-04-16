@@ -222,6 +222,34 @@ export class VectoresComponent implements OnInit {
     ];
   }
 
+  vectorCollections = [
+    {
+      mainImage: 'assets/coleccion1/main.jpg',
+      thumbnails: [
+        'assets/coleccion1/1.jpg',
+        'assets/coleccion1/2.jpg',
+        'assets/coleccion1/3.jpg',
+      ]
+    },
+    {
+      mainImage: 'assets/coleccion2/main.jpg',
+      thumbnails: [
+        'assets/coleccion2/1.jpg',
+        'assets/coleccion2/2.jpg',
+        'assets/coleccion2/3.jpg',
+      ]
+    },
+    {
+      mainImage: 'assets/coleccion3/main.jpg',
+      thumbnails: [
+        'assets/coleccion3/1.jpg',
+        'assets/coleccion3/2.jpg',
+        'assets/coleccion3/3.jpg',
+      ]
+    }
+  ];
+  
+
   onCategoryClick(category: ImageCategory): void {
     console.log(`Categoría seleccionada: ${category.title}`);
   }

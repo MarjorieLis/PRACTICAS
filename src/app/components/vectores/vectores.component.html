@@ -81,3 +81,23 @@
     </div>
   </div>
 </div>
+
+<section class="vector-collections">
+  <h2>Mantén la coherencia en tus diseños vectoriales</h2>
+  <p class="collections-subtitle">
+    Encuentra todos los vectores de una misma serie para conseguir una mayor uniformidad en tus proyectos
+  </p>
+
+  <div class="collection-grid">
+    <div class="collection-card" *ngFor="let collection of vectorCollections">
+      <div class="main-image">
+        <img [src]="collection.mainImage" alt="Main image">
+        <span class="badge">10 images</span>
+      </div>
+      <div class="thumbnail-grid">
+        <img *ngFor="let img of collection.thumbnails" [src]="img" alt="Thumbnail">
+      </div>
+    </div>
+  </div>
+</section>
+
