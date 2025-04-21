@@ -1,4 +1,4 @@
-/* Tus estilos existentes */
+/* Estilos base existentes */
 .gallery-container {
     width: 100%;
     padding: 20px 0;
@@ -239,7 +239,6 @@
     border-radius: 6px;
 }
 
-
 /* Para pantallas pequeñas */
 @media (max-width: 768px) {
     .row {
@@ -369,5 +368,214 @@
 
     .gallery-item {
         height: 200px;
+    }
+}
+
+/* NUEVOS ESTILOS PARA GALERÍA DE VECTORES */
+
+/* Galería de vectores principal */
+.galeria-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Encabezado con botón de explorar */
+.galeria-header {
+    text-align: left;
+    margin-bottom: 40px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.galeria-header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.galeria-header p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 0;
+    max-width: 700px;
+}
+
+.btn-explorar {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-explorar:hover {
+    background-color: #333;
+}
+
+/* Grid de colecciones */
+.colecciones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+/* Tarjeta de colección */
+.coleccion-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.coleccion-card:hover {
+    transform: translateY(-5px);
+}
+
+.coleccion-imagenes {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.grid-2x2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 100%;
+}
+
+.grid-2x2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.coleccion-info {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.coleccion-titulo h3 {
+    font-size: 16px;
+    margin: 0 0 5px 0;
+    font-weight: 600;
+}
+
+.coleccion-titulo p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.btn-opciones {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    padding: 5px;
+    font-size: 18px;
+}
+
+/* Sección de artículos */
+.articulos-section {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.articulos-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Grid de artículos */
+.articulos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+/* Tarjeta de artículo */
+.articulo-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.articulo-card:hover {
+    transform: translateY(-5px);
+}
+
+.articulo-imagen {
+    height: 180px;
+    overflow: hidden;
+}
+
+.articulo-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.articulo-contenido {
+    padding: 20px;
+}
+
+.articulo-contenido h3 {
+    font-size: 18px;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+
+.articulo-contenido p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Media queries para responsive */
+@media (max-width: 768px) {
+    .galeria-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .btn-explorar {
+        margin-top: 20px;
+    }
+    
+    .colecciones-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .articulos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .colecciones-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-2x2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
     }
 }

@@ -24,6 +24,36 @@ interface VectorTheme {
   category: string;
 }
 
+interface Coleccion {
+  id: number;
+  titulo: string;
+  recursos: number;
+  imagenes: string[];
+}
+
+interface Articulo {
+  id: number;
+  titulo: string;
+  descripcion: string;
+  imagen: string;
+  url: string;
+}
+
+interface Tema {
+  id: number;
+  nombre: string;
+  imagen: string;
+  categoria: string;
+}
+
+interface ColeccionPremium {
+  id: number;
+  nombre: string;
+  tipo: string;
+  imagenPrincipal: string;
+  miniaturas: string[];
+}
+
 @Component({
   selector: 'app-vectores',
   templateUrl: './vectores.component.html',
@@ -31,12 +61,131 @@ interface VectorTheme {
   standalone: true,
   imports: [CommonModule]
 })
+
 export class VectoresComponent implements OnInit {
   categories: ImageCategory[] = [];
   featuredVectors: FeaturedVector[] = [];
   vectorThemes: VectorTheme[] = [];
   activeThemeCategory: string = 'Eventos';
   
+  colecciones: Coleccion[] = [
+    {
+      id: 1,
+      titulo: 'Degradados coloridos',
+      recursos: 113,
+      imagenes: [
+        'assets/images/degradados/degradado1.jpg',
+        'assets/images/degradados/degradado2.jpg',
+        'assets/images/degradados/degradado3.jpg',
+        'assets/images/degradados/degradado4.jpg'
+      ]
+    },
+    {
+      id: 2,
+      titulo: 'Vistas vectoriales 3D',
+      recursos: 100,
+      imagenes: [
+        'assets/images/3d/vista3d1.jpg',
+        'assets/images/3d/vista3d2.jpg',
+        'assets/images/3d/vista3d1.jpg',
+        'assets/images/3d/vista3d2.jpg'
+      ]
+    },
+    {
+      id: 3,
+      titulo: 'Ilustraciones a mano',
+      recursos: 50,
+      imagenes: [
+        'assets/images/ilustraciones/ilustracion1.jpg',
+        'assets/images/ilustraciones/ilustracion2.jpg',
+        'assets/images/ilustraciones/ilustracion1.jpg',
+        'assets/images/ilustraciones/ilustracion2.jpg'
+      ]
+    },
+    {
+      id: 4,
+      titulo: 'Color del año 2024',
+      recursos: 68,
+      imagenes: [
+        'assets/images/color2024/color1.jpg',
+        'assets/images/color2024/color2.jpg',
+        'assets/images/color2024/color3.jpg',
+        'assets/images/color2024/color1.jpg'
+      ]
+    }
+  ];
+
+  articulos: Articulo[] = [
+    {
+      id: 1,
+      titulo: '¿Qué es clip art?',
+      descripcion: 'Tanto si te dedicas al diseño gráfico o al marketing como si eres sencillamente una persona entusiasta de la creatividad, es probable que te hayas topado alguna vez con el clip art a la hora de preparar presentaciones o de diseñar...',
+      imagen: 'assets/images/articulos/clipart.jpg',
+      url: '/articulos/que-es-clip-art'
+    },
+    {
+      id: 2,
+      titulo: 'Principios de diseño y cómo aplicarlos',
+      descripcion: 'El diseño es un elemento esencial a la hora de concebir un proyecto atractivo desde el punto de vista visual. Independientemente de que te dediques al diseño gráfico o seas estudiante, creativo o especialista en marketing, tienes que comprender los principios de diseño...',
+      imagen: 'assets/images/articulos/principios.jpg',
+      url: '/articulos/principios-de-diseno'
+    },
+    {
+      id: 3,
+      titulo: 'Cómo crear un personaje vectorial desde el boceto',
+      descripcion: 'Ahora podemos coger ideas oníricas, o incluso prehistóricas, y convertirlas en cualquier cosa que queramos. Y cuando nos referimos a cualquier cosa no estamos exagerando, porque precisamente esa es la belleza del diseño de personajes vectoriales...',
+      imagen: 'assets/images/articulos/personaje.jpg',
+      url: '/articulos/crear-personaje-vectorial'
+    }
+  ];
+
+  temas: Tema[] = [
+    { id: 1, nombre: 'Naturaleza', imagen: 'assets/images/temas/naturaleza.jpg', categoria: 'Naturaleza' },
+    { id: 2, nombre: 'Tecnología', imagen: 'assets/images/temas/tecnologia.jpg', categoria: 'Tecnología' },
+    { id: 3, nombre: 'Negocios', imagen: 'assets/images/temas/negocios.jpg', categoria: 'Negocios' },
+    { id: 4, nombre: 'Abstracto', imagen: 'assets/images/temas/abstracto.jpg', categoria: 'Abstracto' },
+    { id: 5, nombre: 'Personajes', imagen: 'assets/images/temas/personajes.jpg', categoria: 'Personajes' },
+    { id: 6, nombre: 'Íconos', imagen: 'assets/images/temas/iconos.jpg', categoria: 'Íconos' },
+    { id: 7, nombre: 'Patrones', imagen: 'assets/images/temas/patrones.jpg', categoria: 'Patrones' },
+    { id: 8, nombre: 'Fondos', imagen: 'assets/images/temas/fondos.jpg', categoria: 'Fondos' }
+  ];
+
+  coleccionesPremium: ColeccionPremium[] = [
+    {
+      id: 1,
+      nombre: 'Colección Premium 2024',
+      tipo: 'Premium',
+      imagenPrincipal: 'assets/images/premium/premium1.jpg',
+      miniaturas: [
+        'assets/images/premium/thumb1-1.jpg',
+        'assets/images/premium/thumb1-2.jpg',
+        'assets/images/premium/thumb1-3.jpg'
+      ]
+    },
+    {
+      id: 2,
+      nombre: 'Diseños Futuristas',
+      tipo: 'Exclusivo',
+      imagenPrincipal: 'assets/images/premium/premium2.jpg',
+      miniaturas: [
+        'assets/images/premium/thumb2-1.jpg',
+        'assets/images/premium/thumb2-2.jpg',
+        'assets/images/premium/thumb2-3.jpg'
+      ]
+    },
+    {
+      id: 3,
+      nombre: 'Arte Digital 3D',
+      tipo: 'Nuevo',
+      imagenPrincipal: 'assets/images/premium/premium3.jpg',
+      miniaturas: [
+        'assets/images/premium/thumb3-1.jpg',
+        'assets/images/premium/thumb3-2.jpg',
+        'assets/images/premium/thumb3-3.jpg'
+      ]
+    }
+  ];
+
   ngOnInit(): void {
     // Inicializa las categorías con datos de ejemplo
     this.categories = [
@@ -169,19 +318,19 @@ export class VectoresComponent implements OnInit {
         id: 4,
         title: 'Vectores De Otoño',
         imageUrl: 'assets/images/themes/otono.jpg',
-        category: 'Naturaleza'
+        category: 'Eventos'
       },
       {
         id: 5,
         title: 'Vectores De Primavera',
         imageUrl: 'assets/images/themes/primavera.jpg',
-        category: 'Naturaleza'
+        category: 'Eventos'
       },
       {
         id: 6,
         title: 'Vectores De Verano',
         imageUrl: 'assets/images/themes/verano.jpg',
-        category: 'Naturaleza'
+        category: 'Eventos'
       },
       {
         id: 7,
@@ -193,7 +342,7 @@ export class VectoresComponent implements OnInit {
         id: 8,
         title: 'Vectores De Invierno',
         imageUrl: 'assets/images/themes/invierno.jpg',
-        category: 'Naturaleza'
+        category: 'Eventos'
       },
       {
         id: 9,
@@ -218,6 +367,12 @@ export class VectoresComponent implements OnInit {
         title: 'Vectores De San Valentín',
         imageUrl: 'assets/images/themes/san-valentin.jpg',
         category: 'Eventos'
+      },
+      {
+        id: 13,
+        title: 'Vectores De Casas',
+        imageUrl: 'assets/images/themes/san-valentin.jpg',
+        category: 'Objetos'
       },
     ];
   }
@@ -249,6 +404,36 @@ export class VectoresComponent implements OnInit {
     }
   ];
   
+  explorarColecciones(): void {
+    // Implementar navegación o acción para explorar colecciones
+    console.log('Explorando colecciones');
+    // Por ejemplo: this.router.navigate(['/explorar-colecciones']);
+  }
+
+  filtrarTemasPor(categoria: string): void {
+    // Implementar filtrado de temas por categoría
+    console.log('Filtrando por categoría:', categoria);
+    // Implementación del filtrado
+  }
+
+  verColeccion(id: number): void {
+    // Implementar navegación a una colección específica
+    console.log('Viendo colección:', id);
+    // Por ejemplo: this.router.navigate(['/coleccion', id]);
+  }
+
+  verArticulo(url: string): void {
+    // Implementar navegación a un artículo específico
+    console.log('Navegando a:', url);
+    // Por ejemplo: this.router.navigate([url]);
+  }
+
+  mostrarOpciones(id: number): void {
+    // Mostrar menú de opciones para una colección
+    console.log('Mostrando opciones para colección:', id);
+    // Implementar lógica para mostrar un menú de opciones
+  }
+
 
   onCategoryClick(category: ImageCategory): void {
     console.log(`Categoría seleccionada: ${category.title}`);
