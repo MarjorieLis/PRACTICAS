@@ -371,8 +371,218 @@ export class VectoresComponent implements OnInit {
       {
         id: 13,
         title: 'Vectores De Casas',
-        imageUrl: 'assets/images/themes/san-valentin.jpg',
+        imageUrl: 'assets/images/themes/casa.jpg',
         category: 'Objetos'
+      },
+      {
+        id: 15,
+        title: 'Vectores De Coches',
+        imageUrl: 'assets/images/themes/coche.jpg',
+        category: 'Objetos'
+      },
+      {
+        id: 16,
+        title: 'Vectores De Reloj',
+        imageUrl: 'assets/images/themes/reloj.jpg',
+        category: 'Objetos'
+      },
+      {
+        id: 17,
+        title: 'Vectores De Avion',
+        imageUrl: 'assets/images/themes/avion.jpg',
+        category: 'Objetos'
+      },
+      {
+        id: 18,
+        title: 'Vectores De Marco',
+        imageUrl: 'assets/images/themes/marco.jpg',
+        category: 'Objetos'
+      },
+      {
+        id: 19,
+        title: 'Vectores De Libro',
+        imageUrl: 'assets/images/themes/libro.jpg',
+        category: 'Objetos'
+      },
+      {
+        id: 20,
+        title: 'Vectores De Pizarra',
+        imageUrl: 'assets/images/themes/pizarra.jpg',
+        category: 'Objetos'
+      },
+      {
+        id: 21,
+        title: 'Vectores De Regalo',
+        imageUrl: 'assets/images/themes/regalo.jpg',
+        category: 'Objetos'
+      },
+      {
+        id: 22,
+        title: 'Vectores De Sombrero',
+        imageUrl: 'assets/images/themes/sombrero.jpg',
+        category: 'Objetos'
+      },
+      {
+        id: 23,
+        title: 'Vectores De Lapiz',
+        imageUrl: 'assets/images/themes/lapiz.jpg',
+        category: 'Objetos'
+      },
+      {
+        id: 24,
+        title: 'Vectores De Taza de cafe',
+        imageUrl: 'assets/images/themes/taza-cafe.jpg',
+        category: 'Objetos'
+      },
+      {
+        id: 25,
+        title: 'Vectores De Papel picado',
+        imageUrl: 'assets/images/themes/papel-picado.jpg',
+        category: 'Objetos'
+      },
+      {
+        id: 26,
+        title: 'Vectores De Estrella',
+        imageUrl: 'assets/images/themes/estrella.jpg',
+        category: 'Naturaleza'
+      },
+      {
+        id: 27,
+        title: 'Vectores De Corazon',
+        imageUrl: 'assets/images/themes/corazon.jpg',
+        category: 'Naturaleza'
+      },
+      {
+        id: 28,
+        title: 'Vectores De Flores',
+        imageUrl: 'assets/images/themes/flor.jpg',
+        category: 'Naturaleza'
+      },
+      {
+        id: 29,
+        title: 'Vectores De Arbol',
+        imageUrl: 'assets/images/themes/arbol.jpg',
+        category: 'Naturaleza'
+      },
+      {
+        id: 30,
+        title: 'Vectores De Mariposas',
+        imageUrl: 'assets/images/themes/mariposa.jpg',
+        category: 'Naturaleza'
+      },
+      {
+        id: 31,
+        title: 'Vectores De Rayo',
+        imageUrl: 'assets/images/themes/rayo.jpg',
+        category: 'Naturaleza'
+      },
+      {
+        id: 32,
+        title: 'Vectores De Sol',
+        imageUrl: 'assets/images/themes/sol.jpg',
+        category: 'Naturaleza'
+      },
+      {
+        id: 33,
+        title: 'Vectores De Hojas',
+        imageUrl: 'assets/images/themes/hoja.jpg',
+        category: 'Naturaleza'
+      },
+      {
+        id: 34,
+        title: 'Vectores De Lunas',
+        imageUrl: 'assets/images/themes/luna.jpg',
+        category: 'Naturaleza'
+      },
+      {
+        id: 35,
+        title: 'Vectores De Palmeras',
+        imageUrl: 'assets/images/themes/palmera.jpg',
+        category: 'Naturaleza'
+      },
+      {
+        id: 36,
+        title: 'Vectores De Nube',
+        imageUrl: 'assets/images/themes/nube.jpg',
+        category: 'Naturaleza'
+      },
+      {
+        id: 37,
+        title: 'Vectores De Montaña',
+        imageUrl: 'assets/images/themes/montaña.jpg',
+        category: 'Naturaleza'
+      },
+      {
+        id: 38,
+        title: 'Vectores De Flecha',
+        imageUrl: 'assets/images/themes/flecha.jpg',
+        category: 'Otros'
+      },
+      {
+        id: 39,
+        title: 'Vectores De Telefono',
+        imageUrl: 'assets/images/themes/telefono.jpg',
+        category: 'Otros'
+      },
+      {
+        id: 39,
+        title: 'Vectores De Calavera',
+        imageUrl: 'assets/images/themes/calavera.jpg',
+        category: 'Otros'
+      },
+      {
+        id: 39,
+        title: 'Vectores De Corona',
+        imageUrl: 'assets/images/themes/corona.jpg',
+        category: 'Otros'
+      },
+      {
+        id: 39,
+        title: 'Vectores De Mano',
+        imageUrl: 'assets/images/themes/mano.jpg',
+        category: 'Otros'
+      },
+      {
+        id: 39,
+        title: 'Vectores De Ojo',
+        imageUrl: 'assets/images/themes/ojo.jpg',
+        category: 'Otros'
+      },
+      {
+        id: 39,
+        title: 'Vectores De Persona',
+        imageUrl: 'assets/images/themes/persona.jpg',
+        category: 'Otros'
+      },
+      {
+        id: 39,
+        title: 'Vectores De Circulo',
+        imageUrl: 'assets/images/themes/circulo.jpg',
+        category: 'Otros'
+      },
+      {
+        id: 39,
+        title: 'Vectores De Niños',
+        imageUrl: 'assets/images/themes/niño.jpg',
+        category: 'Otros'
+      },
+      {
+        id: 39,
+        title: 'Vectores De Familia',
+        imageUrl: 'assets/images/themes/familia.jpg',
+        category: 'Otros'
+      },
+      {
+        id: 39,
+        title: 'Vectores De abuelos',
+        imageUrl: 'assets/images/themes/abuelo.jpg',
+        category: 'Otros'
+      },
+      {
+        id: 39,
+        title: 'Vectores De Mariachi',
+        imageUrl: 'assets/images/themes/mariachi.jpg',
+        category: 'Otros'
       },
     ];
   }
