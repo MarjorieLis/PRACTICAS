@@ -37,35 +37,35 @@ export class FotosComponent {
     categorias = [
       {
         titulo: 'Personas y emociones',
-        imagen: 'assets/img/personas.jpg'
+        imagen: 'assets/fotos/personas.jpg'
       },
       {
         titulo: 'Estilo de vida y bienestar',
-        imagen: 'assets/img/bienestar.jpg'
+        imagen: 'assets/fotos/bienestar.jpg'
       },
       {
         titulo: 'Educación y formación',
-        imagen: 'assets/img/educacion.jpg'
+        imagen: 'assets/fotos/educacion.jpg'
       },
       {
         titulo: 'Negocios y marketing',
-        imagen: 'assets/img/negocios.jpg'
+        imagen: 'assets/fotos/negocios.jpg'
       },
       {
         titulo: 'Naturaleza',
-        imagen: 'assets/img/naturaleza.jpg'
+        imagen: 'assets/fotos/naturaleza.jpg'
       },
       {
         titulo: 'Comidas y bebida',
-        imagen: 'assets/img/comida.jpg'
+        imagen: 'assets/fotos/comida.jpg'
       },
       {
         titulo: 'Deportes',
-        imagen: 'assets/img/deportes.jpg'
+        imagen: 'assets/fotos/deportes.jpg'
       },
       {
         titulo: 'Industria y tecnología',
-        imagen: 'assets/img/tecnologia.jpg'
+        imagen: 'assets/fotos/tecnologia.jpg'
       }
     ];
   }
