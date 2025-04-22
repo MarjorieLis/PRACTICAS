@@ -1,43 +1,101 @@
-<app-search-banner></app-search-banner>
-
-<!-- Aquí puedes agregar el resto del contenido de la página de fotos -->
-<div class="photo-gallery">
-  <!-- Contenedor de imágenes -->
-</div>
-
-<!-- Encabezado principal -->
-<div class="container">
-  <h1 class="main-title">Fotos perfectas para cada ocasión</h1>
-  <p class="subtitle">Navega por las distintas categorías para encontrar las imágenes que mejor expresen tus ideas y conecten con tu audiencia</p>
-
-  <!-- Grid de categorías principales -->
-  <div class="categories-grid">
-    <div *ngFor="let category of categories" class="category-card" (click)="onCategoryClick(category)">
-      <div class="card-image">
-        <img [src]="category.imageUrl" [alt]="category.title">
+<!-- Sección del héroe con imagen de fondo -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>Fotos gratuitas con las que contar cualquier historia</h1>
+    <p>Descubre millones de fotos de calidad profesional que dejarán a cualquiera sin palabras</p>
+    
+    <!-- Barra de búsqueda -->
+    <div class="search-container" (click)="onSearchContainerClick($event)">
+      <div class="search-bar">
+        <div class="search-icon">
+          <i class="photo-icon">📷</i>
+        </div>
+        <input 
+          type="text" 
+          placeholder="Buscar Fotos" 
+          class="search-input"
+          (click)="toggleSearchOptions(true)"
+        >
+        <div class="action-buttons">
+          <button class="camera-btn">📷</button>
+          <button class="search-btn">🔍</button>
+        </div>
       </div>
-      <div class="card-title">{{ category.title }}</div>
+      
+      <!-- Opciones de búsqueda que aparecen al hacer clic -->
+      <div class="search-options" *ngIf="showSearchOptions">
+        <div class="categories">
+          <button class="category-btn">
+            <span class="category-icon">🔄</span>
+            Vectores
+          </button>
+          <button class="category-btn">
+            <span class="category-icon">🖌️</span>
+            Ilustraciones
+          </button>
+          <button class="category-btn active">
+            <span class="category-icon">📷</span>
+            Fotos
+          </button>
+          <button class="category-btn">
+            <span class="category-icon">🔣</span>
+            Iconos
+          </button>
+          <button class="category-btn">
+            <span class="category-icon">🎬</span>
+            Videos
+          </button>
+          <button class="category-btn">
+            <span class="category-icon">📝</span>
+            PSD
+          </button>
+        </div>
+        
+        <div class="categories second-row">
+          <button class="category-btn">
+            <span class="category-icon">📄</span>
+            Plantillas
+          </button>
+          <button class="category-btn">
+            <span class="category-icon">📱</span>
+            Mockups
+          </button>
+          <button class="category-btn">
+            <span class="category-icon">🎵</span>
+            Música
+          </button>
+        </div>
+        
+        <div class="ai-section">
+          <button class="ai-btn">
+            <span class="ai-icon">🧠</span>
+            Crear imagen con IA
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Búsquedas populares -->
+    <div class="popular-searches">
+      <span>Búsquedas populares:</span>
+      <div class="search-tags">
+        <a *ngFor="let tag of popularSearches" class="search-tag">
+          🔍 {{tag}}
+        </a>
+      </div>
     </div>
   </div>
+</div>
 
-  <!-- Sección de coherencia visual -->
-  <div class="coherence-section">
-    <h2 class="section-title">Mantén la coherencia en tus diseños</h2>
-    <p class="section-subtitle">Elige las fotos de la misma serie para seguir la misma narrativa visual en todo tu proceso creativo</p>
-    
-    <!-- Series de fotos -->
-    <div class="series-container">
-      <div *ngFor="let series of photoSeries" class="photo-series" (click)="onSeriesClick(series)">
-        <div class="main-photo">
-          <img [src]="series.mainPhoto" [alt]="series.title">
-          <div class="badge">{{ series.count }} imágenes</div>
-        </div>
-        <div class="thumbnails">
-          <div *ngFor="let thumbnail of series.thumbnails" class="thumbnail">
-            <img [src]="thumbnail" alt="Miniatura">
-          </div>
-        </div>
-      </div>
+<!-- Sección fotos para cada ocasion -->
+<div class="gallery-container">
+  <h2>Fotos perfectas para cada ocasión</h2>
+  <p>Navega por las distintas categorías para encontrar las imágenes que mejor expresen tus ideas y conecten con tu audiencia</p>
+
+  <div class="categories-grid">
+    <div class="category-card" *ngFor="let categoria of categorias">
+      <img [src]="categoria.imagen" [alt]="categoria.titulo" />
+      <h3>{{ categoria.titulo }}</h3>
     </div>
   </div>
 </div>
