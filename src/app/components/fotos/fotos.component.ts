@@ -68,5 +68,42 @@ export class FotosComponent {
         imagen: 'assets/fotos/tecnologia.jpg'
       }
     ];
+
+    series = [
+      {
+        titulo: 'DJ Nightlife',
+        imagenPrincipal: 'assets/fotos/series1/main.jpg',
+        numeroImagenes: 50,
+        thumbnails: [
+          'assets/fotos/series1/1.jpg',
+          'assets/fotos/series1/2.jpg',
+          'assets/fotos/series1/3.jpg',
+          'assets/fotos/series1/4.jpg'
+        ]
+      },
+      {
+        titulo: 'Mother and Child at Sunset',
+        imagenPrincipal: 'assets/fotos/series2/main.jpg',
+        numeroImagenes: 65,
+        thumbnails: [
+          'assets/fotos/series2/1.jpg',
+          'assets/fotos/series2/2.jpg',
+          'assets/fotos/series2/3.jpg',
+          'assets/fotos/series2/4.jpg'
+        ]
+      },
+      {
+        titulo: 'Friends Picnic',
+        imagenPrincipal: 'assets/fotos/series3/main.jpg',
+        numeroImagenes: 58,
+        thumbnails: [
+          'assets/fotos/series3/1.jpg',
+          'assets/fotos/series3/2.jpg',
+          'assets/fotos/series3/3.jpg',
+          'assets/fotos/series3/4.jpg'
+        ]
+      }
+    ];
+    
   }
   

@@ -99,3 +99,21 @@
     </div>
   </div>
 </div>
+
+<!-- Sección manten la coherencia en tus diseños -->
+<div class="series-container">
+  <h2>Mantén la coherencia en tus diseños</h2>
+  <p>Elige las fotos de la misma serie para seguir la misma narrativa visual en todo tu proceso creativo</p>
+
+  <div class="series-grid">
+    <div class="series-card" *ngFor="let serie of series">
+      <div class="main-image">
+        <img [src]="serie.imagenPrincipal" [alt]="serie.titulo" />
+        <span class="badge">{{ serie.numeroImagenes }} Images</span>
+      </div>
+      <div class="thumbnail-row">
+        <img *ngFor="let thumb of serie.thumbnails" [src]="thumb" [alt]="serie.titulo" />
+      </div>
+    </div>
+  </div>
+</div>

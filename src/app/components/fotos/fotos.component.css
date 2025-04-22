@@ -292,6 +292,73 @@
     font-weight: bold;
 }
 
+/* Sección manten la coherencia en tus diseños */
+.series-container {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.series-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.series-container p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.series-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.series-card {
+    max-width: 360px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-image {
+    position: relative;
+}
+
+.main-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+}
+
+.thumbnail-row {
+    display: flex;
+    gap: 4px;
+    padding: 6px;
+}
+
+.thumbnail-row img {
+    width: 100%;
+    height: 70px;
+    object-fit: cover;
+    flex: 1;
+    border-radius: 6px;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
