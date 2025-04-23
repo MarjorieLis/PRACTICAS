@@ -1,1 +1,38 @@
-<p>ilustraciones works!</p>
+<section class="ilustraciones-container">
+  <h1>Ilustraciones de primera para que tus proyectos cobren vida</h1>
+  <p>
+    El ser humano utiliza ilustraciones desde hace mucho tiempo para interpretar
+    visualmente un texto, transmitir un mensaje o representar un concepto. Se
+    pueden hacer de forma digital o a mano, y la cantidad de estilos y técnicas
+    es casi incontable.
+  </p>
+
+  <h2>Utiliza estas ilustraciones para darle personalidad a tus diseños</h2>
+
+  <div class="galeria-grid">
+    <img src="assets/ilustraciones/1.jpg" class="img img-large" />
+    <img src="assets/ilustraciones/2.jpg" class="img" />
+    <img src="assets/ilustraciones/3.jpg" class="img" />
+    <img src="assets/ilustraciones/4.jpg" class="img" />
+    <img src="assets/ilustraciones/5.jpg" class="img" />
+    <img src="assets/ilustraciones/6.jpg" class="img" />
+  </div>
+</section>
+
+<!-- Sección naturaleza, eventos, estilo, personas-->
+<section class="categorias-container">
+    <nav class="filtros">
+      <a href="#" class="activo">Naturaleza</a>
+      <a href="#">Eventos</a>
+      <a href="#">Estilo</a>
+      <a href="#">Personas</a>
+    </nav>
+  
+    <div class="galeria">
+      <div class="tarjeta" *ngFor="let categoria of categorias">
+        <img [src]="categoria.imagen" [alt]="categoria.nombre" />
+        <div class="etiqueta">{{ categoria.nombre }}</div>
+      </div>
+    </div>
+  </section>
+  

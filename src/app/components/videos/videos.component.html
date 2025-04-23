@@ -1,37 +1,27 @@
-<div class="banner">
-  <h1>
-    Crea historias emocionantes con vídeos de stock de calidad profesional
-  </h1>
-  <p>Descubre videos y motion graphics fascinantes sin derechos de autor</p>
-  <div class="search-box">
-    <input type="text" placeholder="Buscar videos" />
-    <button class="search-btn">Buscar</button>
-  </div>
-  <div class="popular-searches">
-    <button>autismo</button>
-    <button>naturaleza</button>
-    <button>dinero</button>
-  </div>
-</div>
+<!-- Sección buscar video-->
+<div class="video-banner-container">
+  <!-- Video de fondo -->
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="assets/videos/banner-video.mp4" type="video/mp4" />
+    Tu navegador no soporta videos HTML5.
+  </video>
 
-<div class="generate-videos">
-  <button class="generate-btn">🎥 Generar videos con IA</button>
-</div>
+  <!-- Contenido sobre el video -->
+  <div class="video-banner-content">
+    <h1>Crea historias emocionantes con vídeos de stock de calidad profesional</h1>
+    <p>Descubre vídeos y motion graphics fascinantes sin derechos de autor</p>
 
-<div class="videos-container">
-  <h2>Videos destacados</h2>
-  <div class="videos-grid">
-    <div class="video-card">
-      <img src="/assets/videos/video1.jpg" alt="Video 1" />
-      <span class="duration">00:22</span>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar Videos" />
+      <button><i class="fa fa-camera"></i></button>
+      <button><i class="fa fa-search"></i></button>
     </div>
-    <div class="video-card">
-      <img src="/assets/videos/video2.jpg" alt="Video 2" />
-      <span class="duration">00:11</span>
-    </div>
-    <div class="video-card">
-      <img src="/assets/videos/video3.jpg" alt="Video 3" />
-      <span class="duration">00:15</span>
+
+    <div class="popular-searches">
+      <span>Búsquedas populares:</span>
+      <button><i class="fa fa-search"></i> naturaleza</button>
+      <button><i class="fa fa-search"></i> tayikistán</button>
+      <button><i class="fa fa-search"></i> día de la tierra</button>
     </div>
   </div>
 </div>

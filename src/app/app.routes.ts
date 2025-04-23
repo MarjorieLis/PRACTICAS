@@ -5,6 +5,7 @@ import { MediaLibraryComponent } from './components/media-library/media-library.
 import { RegistroComponent } from './components/registro/registro.component';
 import { VectoresComponent } from './components/vectores/vectores.component';
 import { FotosComponent } from './components/fotos/fotos.component';
+import { IlustracionesComponent } from './components/ilustraciones/ilustraciones.component';
 import { IconosComponent } from './components/iconos/iconos.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { PlantillasComponent } from './components/plantillas/plantillas.component';
@@ -16,6 +17,7 @@ export const routes: Routes = [
     { path: 'registro', component: RegistroComponent },
     { path: 'vectores', component: VectoresComponent },
     { path: 'fotos', component: FotosComponent },
+    { path: 'ilustraciones', component: IlustracionesComponent },
     { path: 'iconos', component: IconosComponent }, 
     { path: 'videos', component: VideosComponent },
     { path: 'plantillas', component: PlantillasComponent },
