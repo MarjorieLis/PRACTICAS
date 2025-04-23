@@ -77,8 +77,7 @@ export class FotosComponent {
         thumbnails: [
           'assets/fotos/series1/1.jpg',
           'assets/fotos/series1/2.jpg',
-          'assets/fotos/series1/3.jpg',
-          'assets/fotos/series1/4.jpg'
+          'assets/fotos/series1/3.jpg'
         ]
       },
       {
@@ -89,7 +88,6 @@ export class FotosComponent {
           'assets/fotos/series2/1.jpg',
           'assets/fotos/series2/2.jpg',
           'assets/fotos/series2/3.jpg',
-          'assets/fotos/series2/4.jpg'
         ]
       },
       {
@@ -100,7 +98,6 @@ export class FotosComponent {
           'assets/fotos/series3/1.jpg',
           'assets/fotos/series3/2.jpg',
           'assets/fotos/series3/3.jpg',
-          'assets/fotos/series3/4.jpg'
         ]
       }
     ];
