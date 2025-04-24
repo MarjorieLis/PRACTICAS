@@ -35,4 +35,138 @@
       </div>
     </div>
   </section>
+
+  <!-- Sección ilustra conceptos-->
+  <div class="ilustraciones-container">
+    <!-- Primera sección -->
+    <div class="ilustracion-section">
+      <div class="content-col">
+        <h2>Ilustra conceptos en el diseño de apps y webs</h2>
+        <p>
+          Dentro del diseño web y de aplicaciones, hay diseños que requieren algo más que palabras. 
+          Dependiendo del público al que te dirijas, una combinación de texto e ilustraciones puede ser la 
+          receta perfecta, ya que te servirá para dar contexto visual y hacer más atractivo el resultado. Saca 
+          partido de sus ventajas para que tu diseño destaque sobre los demás.
+        </p>
+      </div>
+      <div class="image-col">
+        <!-- Imagen de personas colaborando con elementos coloridos -->
+        <img src="assets/images/ilustracion-app-web.png" alt="Ilustración de personas colaborando en diseño" class="illustration-image">
+      </div>
+    </div>
+  
+    <!-- Segunda sección -->
+    <div class="ilustracion-section segunda-seccion">
+      <div class="image-col">
+        <!-- Imagen de personas apuntando a un objetivo -->
+        <img src="assets/images/ilustracion-infografias.png" alt="Ilustración de personas trabajando con infografías" class="illustration-image">
+      </div>
+      <div class="content-col">
+        <h2>Intégralas en las infografías de tus presentaciones</h2>
+        <p>
+          En tus presentaciones (ya sean empresariales, de marketing o para tus clases), muchas veces tendrás 
+          que mostrar grandes bloques de datos o estadísticas... y eso puede ser difícil de mostrar y de 
+          entender. Las infografías son perfectas para transmitir de forma sencilla muchos datos. Además, 
+          si las combinas con elementos de ilustración, todo será mucho más fácil.
+        </p>
+      </div>
+    </div>
+
+    <!-- Tercera sección -->
+    <div class="ilustracion-section">
+      <div class="content-col">
+        <h2>Añádelas a carteles o banners para promocionar productos</h2>
+        <p>
+          A veces, basta con combinar diferentes recursos para conseguir 
+          unos resultados espectaculares. Por ejemplo, seguro que sabes lo 
+          competitivo que puede ser el mundo de la publicidad. Cuando diseñes 
+          carteles o banners, prueba a añadir ilustraciones con un estilo que 
+          encaje con la audiencia a la que te diriges. Seguro que todo el mundo
+          se fijará en ellos.
+        </p>
+      </div>
+      <div class="image-col">
+        <!-- Imagen de personas colaborando con elementos coloridos -->
+        <img src="assets/images/ilustracion-app-web.png" alt="Ilustración de personas colaborando en diseño" class="illustration-image">
+      </div>
+    </div>
+  </div>
+
+<!-- Sección FAQ-->
+<div class="faq-container">
+  <h1>FAQ</h1>
+
+  <div class="faq-item">
+    <div class="faq-question" (click)="toggleFaq(0)">
+      <span>¿Qué es una ilustración?</span>
+      <!-- Muestra + cuando está cerrado (false) y − cuando está abierto (true) -->
+      <span class="faq-icon">{{ faqStates[0] ? '−' : '+' }}</span>
+    </div>
+    <!-- La clase faq-open se aplica condicionalmente cuando faqStates[0] es true -->
+    <div class="faq-answer" [ngClass]="{'faq-open': faqStates[0]}">
+      <p>Una ilustración es normalmente una imagen o un dibujo. Aunque también se le llama ilustración al acto de crear una imagen. Entonces podríamos decir que las ilustraciones son representaciones pictóricas de cosas vistas o imaginadas por la persona que las crea.</p>
+    </div>
+  </div>
+
+  <!-- Resto de las preguntas FAQ con la misma estructura -->
+  <div class="faq-item">
+    <div class="faq-question" (click)="toggleFaq(1)">
+      <span>¿Cuál es el mejor software gratuito para hacer ilustraciones?</span>
+      <span class="faq-icon">{{ faqStates[1] ? '−' : '+' }}</span>
+    </div>
+    <div class="faq-answer" [ngClass]="{'faq-open': faqStates[1]}">
+      <p>El mercado está repleto de software de diseño gráfico. Cuando hablamos de gráficos vectoriales, el más famoso es Adobe Illustrator. Pero no es un programa gratuito y tendrás que pagar por él. Sin embargo, hay otras alternativas, como el caso de nuestro editor online y gratuito: Wepik. Para utilizarlo no necesitas experiencia previa en el diseño y con él podrás editar todo tipo de ilustraciones y añadirles diferentes elementos.</p>
+    </div>
+  </div>
+
+  <!-- Otras preguntas FAQ... -->
+  <div class="faq-item">
+    <div class="faq-question" (click)="toggleFaq(1)">
+      <span>¿Cómo puedo crear ilustraciones online?</span>
+      <span class="faq-icon">{{ faqStates[1] ? '−' : '+' }}</span>
+    </div>
+    <div class="faq-answer" [ngClass]="{'faq-open': faqStates[1]}">
+      <p>La mayoría de diseñadores lo hacen mediante un software de 
+        diseño gráfico junto con una tableta gráfica (o un ratón). 
+        Hay otras alternativas que te permiten diseñar online sin 
+        tener que descargar programas o aplicaciones. Una de ellas 
+        es Wepik, nuestro editor online. Puedes empezar con un proyecto 
+        en blanco o puedes personalizar alguna de nuestras ilustraciones 
+        que tenemos ya optimizadas. Podrás editar online con nuestro editor 
+        aquellas ilustraciones que tengan el botón ¡Editar online!. Cuando 
+        tu diseño esté listo, podrás descargarlo en formato JPG, PNG o PDF.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" (click)="toggleFaq(1)">
+      <span>¿Qué diferencia hay entre un diseño gráfico y una ilustración?</span>
+      <span class="faq-icon">{{ faqStates[1] ? '−' : '+' }}</span>
+    </div>
+    <div class="faq-answer" [ngClass]="{'faq-open': faqStates[1]}">
+      <p>Un diseño gráfico es un término muy amplio que engloba todo tipo de 
+        comunicación visual y sus propósitos. Una ilustración es un tipo de 
+        diseño gráfico. Son imágenes o dibujos que cuentan una historia u 
+        ofrecen una representación pictórica de algo.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Sección articulos relacionados-->
+<div class="articulos-container">
+  <h2>Artículos relacionados</h2>
+  
+  <div class="articulos-grid">
+    <div class="articulo-card" *ngFor="let articulo of articulos">
+      <div class="articulo-imagen">
+        <img [src]="articulo.imagen" [alt]="articulo.titulo">
+      </div>
+      <div class="articulo-content">
+        <h3>{{ articulo.titulo }}</h3>
+        <p>{{ articulo.descripcion }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
   
