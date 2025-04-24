@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NgForOf, CommonModule } from '@angular/common';
+import { Component, HostListener } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 // Definición de la interfaz Articulo
 interface Articulo {
@@ -69,5 +69,16 @@ export class IlustracionesComponent {
     }
   ];
 
-  constructor() { }
+  // Estado para el panel de búsqueda
+  isSearchPanelVisible = false;
+
+  toggleSearchPanel(event: Event): void {
+    event.stopPropagation();
+    this.isSearchPanelVisible = !this.isSearchPanelVisible;
+  }
+
+  @HostListener('document:click')
+  hideSearchPanel(): void {
+    this.isSearchPanelVisible = false;
+  }
 }

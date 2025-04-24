@@ -1,3 +1,58 @@
+<!-- Contenedor principal con imagen de fondo -->
+<div class="hero-search-container">
+  <div class="hero-background">
+    <!-- El texto superpuesto en la imagen -->
+    <div class="hero-text">
+      <h1>Ilustraciones gratuitas para cada historia </h1>
+      <p>Explora millones de ilustraciones para cada ocasión</p>
+    </div>
+    
+    <!-- Barra de búsqueda -->
+    <div class="search-container">
+      <div class="search-bar" (click)="toggleSearchPanel($event)">
+        <div class="search-input-container">
+          <span class="search-icon material-icons">search</span>
+          <input type="text" placeholder="Buscar Ilustraciones" class="search-input" (click)="$event.stopPropagation()">
+          <div class="action-icons">
+            <button class="icon-btn"><span class="material-icons">file_copy</span></button>
+            <button class="icon-btn"><span class="material-icons">photo_camera</span></button>
+            <button class="icon-btn"><span class="material-icons">search</span></button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Panel de búsqueda (oculto por defecto) -->
+      <div class="search-panel" *ngIf="isSearchPanelVisible">
+        <div class="categories">
+          <button class="category-btn"><span class="material-icons">grid_view</span> Vectores</button>
+          <button class="category-btn active"><span class="material-icons">brush</span> Ilustraciones</button>
+          <button class="category-btn"><span class="material-icons">photo</span> Fotos</button>
+          <button class="category-btn"><span class="material-icons">emoji_objects</span> Iconos</button>
+          <button class="category-btn"><span class="material-icons">videocam</span> Videos</button>
+          <button class="category-btn"><span class="material-icons">picture_as_pdf</span> PSD</button>
+        </div>
+        
+        <div class="categories second-row">
+          <button class="category-btn"><span class="material-icons">description</span> Plantillas</button>
+          <button class="category-btn"><span class="material-icons">smartphone</span> Mockups</button>
+          <button class="category-btn"><span class="material-icons">music_note</span> Música</button>
+        </div>
+        
+        <div class="ai-options">
+          <div class="ai-option">
+            <span class="material-icons">auto_awesome</span> Crear imagen con IA
+          </div>
+          <div class="ai-option">
+            <span class="material-icons">label</span> Crear icono y sticker con IA
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<!-- Sección ilustraciones-->
+
 <section class="ilustraciones-container">
   <h1>Ilustraciones de primera para que tus proyectos cobren vida</h1>
   <p>
