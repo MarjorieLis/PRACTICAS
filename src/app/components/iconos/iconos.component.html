@@ -1,41 +1,80 @@
-<div class="iconos-banner">
-  <h1>Encuentra iconos que te apasionen</h1>
-  <p>
-    Más de 10 millones de iconos PNG y SVG. Todos los que te puedas imaginar y
-    más.
-  </p>
-  <div class="search-box">
-    <input type="text" placeholder="Buscar iconos" />
-    <button class="search-btn">🔍 Buscar</button>
+<!-- Seccion barra de buscar -->
+<div class="search-container">
+  <!-- Encabezado principal -->
+  <div class="main-header">
+    <div class="icons-left">
+      <div class="icon blue-star"></div>
+      <div class="icon orange-chair"></div>
+      <div class="icon wifi"></div>
+    </div>
+
+    <div class="title-section">
+      <h1>Encuentra {{ currentTitle }} que te apasionen</h1>
+      <p>
+        Más de 10 millones de iconos PNG y SVG. Todos los que te puedas imaginar
+        y más.
+      </p>
+    </div>
+
+    <div class="icons-right">
+      <div class="icon diamond"></div>
+      <div class="icon user-circle"></div>
+    </div>
   </div>
-  <div class="popular-searches">
-    <button>📱 whatsapp</button>
-    <button>📷 instagram</button>
-    <button>📆 calendario</button>
+
+  <!-- Barra de búsqueda -->
+  <div class="search-bar-container" [class.expanded]="isSearchExpanded">
+    <div class="search-bar" (click)="toggleSearch()">
+      <i class="search-icon"></i>
+      <input
+        type="text"
+        placeholder="Buscar Iconos"
+        [(ngModel)]="searchQuery"
+        (click)="$event.stopPropagation()"
+      />
+      <div class="search-actions">
+        <button class="action-button share"></button>
+        <button class="action-button camera"></button>
+        <button class="action-button magnify"></button>
+      </div>
+    </div>
+
+    <!-- Panel expandido (aparece al hacer clic en la barra de búsqueda) -->
+    <div class="expanded-panel" *ngIf="isSearchExpanded">
+      <!-- Categorías de búsqueda -->
+      <div class="search-categories">
+        <button class="category-button">Vectores</button>
+        <button class="category-button">Ilustraciones</button>
+        <button class="category-button">Fotos</button>
+        <button class="category-button active">Iconos</button>
+        <button class="category-button">Videos</button>
+        <button class="category-button">PSD</button>
+        <button class="category-button">Plantillas</button>
+        <button class="category-button">Mockups</button>
+        <button class="category-button">Música</button>
+      </div>
+
+      <!-- Opciones de IA -->
+      <div class="ai-options">
+        <button class="ai-option">
+          <i class="ai-icon"></i>
+          Crear imagen con IA
+        </button>
+        <button class="ai-option">
+          <i class="ai-icon"></i>
+          Crear icono y sticker con IA
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Búsquedas populares -->
+  <div class="popular-searches" *ngIf="!isSearchExpanded">
+    <span class="popular-label">Búsquedas populares:</span>
+    <button class="popular-search" *ngFor="let search of popularSearches">
+      <i class="search-small-icon"></i> {{ search }}
+    </button>
   </div>
 </div>
 
-<div class="iconos-container">
-  <div class="card">
-    <h3>📦 Iconos estáticos</h3>
-    <p>Los iconos indicados para diseños claros y sencillos.</p>
-    <span>SVG</span> <span>PNG</span>
-  </div>
-  <div class="card">
-    <h3>💡 Iconos de interfaz</h3>
-    <p>Haz que tu web y tus apps destaquen gracias a estos iconos.</p>
-    <span>ANDROID</span> <span>IOS</span> <span>CSS</span> <span>SVG</span>
-    <span>PNG</span>
-  </div>
-  <div class="card">
-    <h3>🎞️ Iconos animados</h3>
-    <p>Tu trabajo cobrará vida con iconos dinámicos.</p>
-    <span>JSON</span> <span>MP4</span> <span>GIF</span> <span>SVG</span>
-    <span>PNG</span>
-  </div>
-  <div class="card">
-    <h3>🎨 Stickers</h3>
-    <p>Dales un toque divertido a tus diseños o páginas web.</p>
-    <span>SVG</span> <span>PNG</span>
-  </div>
-</div>
+<!-- Seccion millon de iconos -->

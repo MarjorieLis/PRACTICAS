@@ -1,64 +1,50 @@
 // iconos.component.ts
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
-interface IconCategory {
-  id: string;
-  title: string;
-  description: string;
-  formats: string[];
-  image: string;
-}
 
 @Component({
   selector: 'app-iconos',
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './iconos.component.html',
-  styleUrls: ['./iconos.component.css']
+  styleUrls: ['./iconos.component.css'],
 })
 export class IconosComponent implements OnInit {
-  searchTerm: string = '';
-  popularSearches: string[] = ['whatsapp', 'instagram', 'calendario'];
-  
-  iconCategories: IconCategory[] = [
-    {
-      id: 'static',
-      title: 'Iconos estáticos',
-      description: 'Los iconos indicados para diseños claros y sencillos.',
-      formats: ['SVG', 'PNG'],
-      image: 'assets/images/static-icons.png'
-    },
-    {
-      id: 'interface',
-      title: 'Iconos de interfaz',
-      description: 'Haz que tu web y tus apps destaquen gracias a unos componentes únicos.',
-      formats: ['ANDROID', 'IOS', 'CSS', 'SVG', 'PNG'],
-      image: 'assets/images/interface-icons.png'
-    },
-    {
-      id: 'animated',
-      title: 'Iconos animados',
-      description: 'Tu trabajo cobra más vida con iconos dinámicos.',
-      formats: ['JSON', 'MP4', 'GIF', 'SVG', 'PNG'],
-      image: 'assets/images/animated-icons.png'
-    },
-    {
-      id: 'stickers',
-      title: 'Stickers',
-      description: 'Dale un toque divertido a tus diseños o a tus páginas web.',
-      formats: ['SVG', 'PNG'],
-      image: 'assets/images/stickers.png'
-    }
+  searchQuery: string = '';
+  isSearchExpanded: boolean = false;
+  rotatingTitles: string[] = [
+    'iconos animados',
+    'iconos de interfaz',
+    'stickers',
   ];
+  currentTitleIndex: number = 0;
+  currentTitle: string = '';
 
-  constructor() {}
+  popularSearches: string[] = ['whatsapp', 'instagram', 'calendario'];
 
-  ngOnInit(): void {}
+  constructor(private elementRef: ElementRef) {}
 
-  searchIcons(): void {
-    // Aquí iría la lógica para buscar iconos
-    console.log('Buscando:', this.searchTerm);
+  ngOnInit(): void {
+    this.rotateTitles();
+  }
+
+  rotateTitles(): void {
+    this.currentTitle = this.rotatingTitles[this.currentTitleIndex];
+    this.currentTitleIndex =
+      (this.currentTitleIndex + 1) % this.rotatingTitles.length;
+    setTimeout(() => this.rotateTitles(), 3000); // Cambiar título cada 3 segundos
+  }
+
+  toggleSearch(): void {
+    this.isSearchExpanded = true;
+  }
+
+  @HostListener('document:click', ['$event'])
+  clickOutside(event: Event): void {
+    // Si el clic fue fuera del elemento de búsqueda, cerramos el panel expandido
+    if (!this.elementRef.nativeElement.contains(event.target)) {
+      this.isSearchExpanded = false;
+    }
   }
 }
